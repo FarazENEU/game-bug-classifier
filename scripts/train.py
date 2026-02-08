@@ -52,22 +52,21 @@ def format_prompt(example):
 ### Output:
 {example['output']}"""
 
-def tokenize_function(examples, tokenizer, max_length=512):
-    """Tokenize examples"""
-    # Format prompts
-    prompts = [format_prompt(ex) for ex in examples]
+def tokenize_function(example, tokenizer, max_length=512):
+    """Tokenize a single example"""
+    # Format prompt
+    prompt = format_prompt(example)
     
-    # Tokenize
+    # Tokenize (don't use return_tensors for dataset mapping)
     tokenized = tokenizer(
-        prompts,
+        prompt,
         truncation=True,
         max_length=max_length,
         padding='max_length',
-        return_tensors='pt'
     )
     
     # For causal LM, labels are the same as input_ids
-    tokenized['labels'] = tokenized['input_ids'].clone()
+    tokenized['labels'] = tokenized['input_ids'].copy()
     
     return tokenized
 
@@ -150,19 +149,19 @@ def train(
     # Tokenize datasets
     print("\n🔤 Tokenizing datasets...")
     
-    def tokenize_batch(examples):
-        return tokenize_function(examples, tokenizer, max_length)
+    def tokenize_example(example):
+        return tokenize_function(example, tokenizer, max_length)
     
     train_dataset = train_dataset.map(
-        lambda x: tokenize_batch([x]),
-        batched=False,
-        remove_columns=train_dataset.column_names
+        tokenize_example,
+        remove_columns=train_dataset.column_names,
+        desc="Tokenizing training data"
     )
     
     val_dataset = val_dataset.map(
-        lambda x: tokenize_batch([x]),
-        batched=False,
-        remove_columns=val_dataset.column_names
+        tokenize_example,
+        remove_columns=val_dataset.column_names,
+        desc="Tokenizing validation data"
     )
     
     # Training arguments
