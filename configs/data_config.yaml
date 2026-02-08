@@ -1,0 +1,73 @@
+# Data Configuration
+
+# Data paths
+paths:
+  raw_data: "./data/raw"
+  processed_data: "./data/processed"
+  train_split: "./data/splits/train.jsonl"
+  val_split: "./data/splits/val.jsonl"
+  test_split: "./data/splits/test.jsonl"
+  sample_data: "./data/sample"
+
+# Data collection
+collection:
+  # GitHub repositories to scrape
+  github_repos:
+    - "godotengine/godot"
+    - "bevyengine/bevy"
+    - "FreeCAD/FreeCAD"
+    - "minetest/minetest"
+    - "OpenRCT2/OpenRCT2"
+  
+  # Labels to filter (bug-related)
+  issue_labels:
+    - "bug"
+    - "defect"
+    - "issue"
+    - "crash"
+    - "error"
+  
+  max_issues_per_repo: 2000
+  include_closed: true
+  language_filter: "en"  # English only
+
+# Data preprocessing
+preprocessing:
+  min_text_length: 50           # Minimum characters in bug report
+  max_text_length: 2000         # Maximum characters
+  remove_duplicates: true
+  filter_incomplete: true        # Remove reports without labels
+  normalize_whitespace: true
+  remove_urls: false             # Keep URLs - might be useful context
+  remove_code_blocks: false      # Keep code - important for bugs
+
+# Label categories
+labels:
+  severity:
+    critical: ["critical", "blocker", "crash", "data loss", "security"]
+    high: ["high", "major", "severe", "regression"]
+    medium: ["medium", "moderate", "normal"]
+    low: ["low", "minor", "trivial", "cosmetic"]
+  
+  component:
+    ui: ["ui", "gui", "interface", "menu", "hud", "display"]
+    gameplay: ["gameplay", "mechanics", "logic", "controls", "input"]
+    audio: ["audio", "sound", "music", "sfx"]
+    graphics: ["graphics", "rendering", "visual", "shader", "texture"]
+    network: ["network", "multiplayer", "online", "connection"]
+    performance: ["performance", "fps", "lag", "optimization", "memory"]
+    save: ["save", "load", "persistence", "data"]
+    other: ["misc", "other", "unknown"]
+  
+  reproducibility:
+    always: ["always", "100%", "consistent", "every time"]
+    sometimes: ["sometimes", "intermittent", "occasional", "50%"]
+    rare: ["rare", "once", "random", "hard to reproduce"]
+
+# Data splits
+splits:
+  train: 0.7
+  validation: 0.15
+  test: 0.15
+  stratify_by: "severity"  # Ensure balanced severity across splits
+  random_seed: 42

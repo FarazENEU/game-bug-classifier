@@ -1,0 +1,33 @@
+# Model Configuration
+
+# Base model selection
+base_model:
+  name: "mistralai/Mistral-7B-Instruct-v0.2"  # Can also try: distilgpt2, gpt2, opt-350m
+  cache_dir: "./cache/models"
+  
+# LoRA Configuration (Parameter-Efficient Fine-Tuning)
+lora:
+  enabled: true
+  r: 8                    # LoRA rank
+  lora_alpha: 32          # LoRA scaling factor
+  lora_dropout: 0.1
+  target_modules:
+    - q_proj
+    - v_proj
+    - k_proj
+    - o_proj
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Quantization (for memory efficiency)
+quantization:
+  enabled: true
+  load_in_8bit: false
+  load_in_4bit: true      # 4-bit quantization for larger models
+
+# Tokenizer settings
+tokenizer:
+  max_length: 512
+  padding: "max_length"
+  truncation: true
+  add_special_tokens: true

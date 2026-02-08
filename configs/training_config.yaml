@@ -1,0 +1,57 @@
+# Training Configuration
+
+# Output directories
+output_dir: "./outputs/training"
+logging_dir: "./outputs/logs"
+checkpoint_dir: "./models/checkpoints"
+
+# Training hyperparameters
+training:
+  num_train_epochs: 3
+  per_device_train_batch_size: 4
+  per_device_eval_batch_size: 8
+  gradient_accumulation_steps: 4
+  learning_rate: 2.0e-5
+  weight_decay: 0.01
+  warmup_steps: 500
+  max_grad_norm: 1.0
+  
+# Learning rate scheduler
+lr_scheduler:
+  type: "cosine"  # Options: linear, cosine, polynomial
+  warmup_ratio: 0.1
+
+# Optimizer
+optimizer:
+  type: "adamw"
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-8
+
+# Evaluation
+evaluation:
+  eval_strategy: "steps"
+  eval_steps: 500
+  save_strategy: "steps"
+  save_steps: 500
+  save_total_limit: 3
+  load_best_model_at_end: true
+  metric_for_best_model: "eval_loss"
+  greater_is_better: false
+
+# Logging
+logging:
+  logging_steps: 100
+  report_to: ["tensorboard", "wandb"]  # Remove wandb if not using
+  logging_first_step: true
+
+# Performance
+performance:
+  fp16: false              # Set true for GPU with FP16 support
+  bf16: true               # Set true for A100/H100 GPUs
+  dataloader_num_workers: 4
+  dataloader_pin_memory: true
+  gradient_checkpointing: true
+
+# Reproducibility
+seed: 42

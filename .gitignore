@@ -1,0 +1,100 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+config.json
+*.key
+*.pem
+credentials.json
+
+# API Keys and Tokens
+*_token.txt
+*_key.txt
+*.token
+api_keys/
+
+# Model files (too large for git)
+models/checkpoints/
+models/saved_models/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.h5
+*.onnx
+
+# Data files (too large for git)
+data/raw/
+data/processed/
+data/interim/
+*.csv
+*.jsonl
+*.parquet
+*.feather
+!data/sample/
+
+# Logs and outputs
+logs/
+*.log
+outputs/
+results/
+wandb/
+mlruns/
+.tensorboard/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# HuggingFace cache
+.cache/
+huggingface/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
