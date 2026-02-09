@@ -178,7 +178,7 @@ def evaluate_baseline(model, tokenizer, test_path, num_samples=100):
                 max_new_tokens=100,
                 do_sample=False,
                 pad_token_id=tokenizer.eos_token_id,
-                tempetitle
+                temperature=1.0,
             )
         
         generated = tokenizer.decode(
@@ -191,7 +191,7 @@ def evaluate_baseline(model, tokenizer, test_path, num_samples=100):
         # Normalize and compare
         pred_result = {
             'id': i,
-            'title': example['title'],
+            'title': title,
             'expected': expected,
             'predicted_raw': parsed,
             'predicted_normalized': {},
