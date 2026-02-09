@@ -11,9 +11,9 @@ Train and evaluate 3 LoRA rank configurations to find optimal balance between ex
 **Note:** All three configurations will be trained sequentially in one automated run!
 
 ## 📋 Prerequisites
-- ✅ train_improved.jsonl exists in Kaggle working directory
-- ✅ val.jsonl uploaded to Kaggle dataset
-- ✅ test.jsonl uploaded to Kaggle dataset
+- ✅ train_improved.jsonl uploaded to Kaggle dataset (data-splits)
+- ✅ val.jsonl uploaded to Kaggle dataset (data-splits)
+- ✅ test.jsonl uploaded to Kaggle dataset (data-splits)
 - ✅ 2× Tesla T4 GPUs available
 
 ## ⏱️ Time Estimate
@@ -134,8 +134,8 @@ Upload `scripts/run_hyperparameter_experiments.py` to Kaggle, then:
 Run each configuration separately with these commands:
 
 ```python
-# V2-r4:2Lower capacity
-!python train.py --train_path /kaggle/working/train_improved.jsonl \
+# V2-r4: Lower capacity
+!python train.py --train_path /kaggle/input/data-splits/train_improved.jsonl \
     --val_path /kaggle/input/data-splits/val.jsonl --output_dir /kaggle/working/outputs_r4 \
     --lora_r 4 --lora_alpha 16 --num_epochs 3 --batch_size 4 --learning_rate 2e-4 --max_length 512
 !cd /kaggle/working && zip -r bug_classifier_v2_r4.zip outputs_r4/final_model/
@@ -143,7 +143,7 @@ Run each configuration separately with these commands:
 !cp evaluation_results.json evaluation_results_v2_r4.json
 
 # V2-r8: Baseline
-!python train.py --train_path /kaggle/working/train_improved.jsonl \
+!python train.py --train_path /kaggle/input/data-splits/train_improved.jsonl \
     --val_path /kaggle/input/data-splits/val.jsonl --output_dir /kaggle/working/outputs_r8 \
     --lora_r 8 --lora_alpha 32 --num_epochs 3 --batch_size 4 --learning_rate 2e-4 --max_length 512
 !cd /kaggle/working && zip -r bug_classifier_v2_r8.zip outputs_r8/final_model/
@@ -151,7 +151,7 @@ Run each configuration separately with these commands:
 !cp evaluation_results.json evaluation_results_v2_r8.json
 
 # V2-r16: Higher capacity
-!python train.py --train_path /kaggle/working/train_improved.jsonl \
+!python train.py --train_path /kaggle/input/data-splits/train_improved.jsonl \
     --val_path /kaggle/input/data-splits/val.jsonl --output_dir /kaggle/working/outputs_r16 \
     --lora_r 16 --lora_alpha 64 --num_epochs 3 --batch_size 4 --learning_rate 2e-4 --max_length 512
 

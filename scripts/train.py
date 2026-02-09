@@ -127,7 +127,7 @@ def setup_model(model_name, lora_r=8, lora_alpha=32, use_4bit=True):
 
 def train(
     model_name="mistralai/Mistral-7B-Instruct-v0.2",
-    train_path="/kaggle/working/train_improved.jsonl",
+    train_path="/kaggle/input/data-splits/train_improved.jsonl",
     val_path="/kaggle/input/data-splits/val.jsonl",
     output_dir="/kaggle/working/outputs",
     num_epochs=3,
@@ -224,7 +224,7 @@ def train(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name", type=str, default="mistralai/Mistral-7B-Instruct-v0.2")
-    parser.add_argument("--train_path", type=str, default="/kaggle/working/train_improved.jsonl")
+    parser.add_argument("--train_path", type=str, default="/kaggle/input/data-splits/train_improved.jsonl")
     parser.add_argument("--val_path", type=str, default="/kaggle/input/data-splits/val.jsonl")
     parser.add_argument("--output_dir", type=str, default="/kaggle/working/outputs")
     parser.add_argument("--num_epochs", type=int, default=3)

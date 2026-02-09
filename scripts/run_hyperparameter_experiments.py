@@ -78,8 +78,9 @@ def main():
         print(f"{'='*70}\n")
         
         # Training
+        # Note: train.py should be in same directory (both uploaded to /kaggle/working/)
         train_cmd = f"""python train.py \
-            --train_path /kaggle/working/train_improved.jsonl \
+            --train_path /kaggle/input/data-splits/train_improved.jsonl \
             --val_path /kaggle/input/data-splits/val.jsonl \
             --output_dir {exp['output_dir']} \
             --lora_r {exp['lora_r']} \
