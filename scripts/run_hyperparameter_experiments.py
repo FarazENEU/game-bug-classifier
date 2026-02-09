@@ -44,8 +44,7 @@ def main():
     print("\nTotal estimated time: ~7 hours")
     print("\n⚠️  Keep Kaggle notebook active (60-min timeout!)")
     print("="*70)
-    
-    user_input = input("\nPress Enter to start, or Ctrl+C to cancel: ")
+    print("\n🚀 Starting experiments...\n")
     
     experiments = [
         {
@@ -80,8 +79,8 @@ def main():
         # Training
         # Note: train.py should be in same directory (both uploaded to /kaggle/working/)
         train_cmd = f"""python train.py \
-            --train_path /kaggle/input/data-splits/train_improved.jsonl \
-            --val_path /kaggle/input/data-splits/val.jsonl \
+            --train_path /kaggle/input/data-split/train_improved.jsonl \
+            --val_path /kaggle/input/data-split/val.jsonl \
             --output_dir {exp['output_dir']} \
             --lora_r {exp['lora_r']} \
             --lora_alpha {exp['lora_alpha']} \

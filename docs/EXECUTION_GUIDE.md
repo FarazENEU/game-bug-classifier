@@ -11,9 +11,9 @@ Train and evaluate 3 LoRA rank configurations to find optimal balance between ex
 **Note:** All three configurations will be trained sequentially in one automated run!
 
 ## 📋 Prerequisites
-- ✅ train_improved.jsonl uploaded to Kaggle dataset (data-splits)
-- ✅ val.jsonl uploaded to Kaggle dataset (data-splits)
-- ✅ test.jsonl uploaded to Kaggle dataset (data-splits)
+- ✅ train_improved.jsonl uploaded to Kaggle dataset (data-split)
+- ✅ val.jsonl uploaded to Kaggle dataset (data-split)
+- ✅ test.jsonl uploaded to Kaggle dataset (data-split)
 - ✅ 2× Tesla T4 GPUs available
 
 ## ⏱️ Time Estimate
@@ -40,7 +40,7 @@ Train and evaluate 3 LoRA rank configurations to find optimal balance between ex
 
 !python scripts/evaluate_baseline.py \
     --model_name mistralai/Mistral-7B-Instruct-v0.2 \
-    --test_path /kaggle/input/data-splits/test.jsonl \
+    --test_path /kaggle/input/data-split/test.jsonl \
     --num_samples 100 \
     --output_file baseline_zero_shot_results.json
 ```
@@ -93,26 +93,120 @@ Upload `scripts/run_hyperparameter_experiments.py` to Kaggle, then:
 ```python
 # V2-r4: Lower capacity
 !python train.py \
-    --train_path /kaggle/working/train_improved.jsonl \
-    --val_path /kaggle/input/data-splits/val.jsonl \
+    --train_path /kaggle/input/data-split/train_improved.jsonl \
+    --val_path /kaggle/input/data-split/val.jsonl \
     --output_dir /kaggle/working/outputs_r4 \
     --lora_r 4 \
     --lora_alpha 16 \
     --num_epochs 3 \
-    -ONE SCRIPT RUNS ALL THREE:**
-
-Upload `scripts/run_hyperparameter_experiments.py` to Kaggle, then:
-
-```python
-# This runs ALL THREE experiments (r=4, r=8, r=16) sequentially!
-# Completely hands-off for ~7 hours
-!python scripts/run_hyperparameter_experiments.py
+    --batch_size 4 \
+    --learning_rate 2e-4 \
+    --max_length 512
 ```
 
-**Time:** ~7 hours total (fully automated!)
+**Time:** ~2 hours
 
-**What it does:**
-1. Trains V2-r4 (r=4, α=16) → 2 hours
+---
+
+### Step 3: Evaluate V2-r4
+
+```python
+!python evaluate.py \
+    --model_path /kaggle/working/outputs_r4/final_model \
+    --num_samples 100
+
+# Zip model for download
+!cd /kaggle/working && zip -r bug_classifier_v2_r4.zip outputs_r4/final_model/
+
+# Save results with unique name
+!cp evaluation_results.json evaluation_results_v2_r4.json
+```
+
+**Download:** bug_classifier_v2_r4.zip, evaluation_results_v2_r4.json
+
+---
+
+### Step 4: Train V2-r8 (Baseline)
+
+```python
+# V2-r8: Baseline
+!python train.py \
+    --train_path /kaggle/input/data-split/train_improved.jsonl \
+    --val_path /kaggle/input/data-split/val.jsonl \
+    --output_dir /kaggle/working/outputs_r8 \
+    --lora_r 8 \
+    --lora_alpha 32 \
+    --num_epochs 3 \
+    --batch_size 4 \
+    --learning_rate 2e-4 \
+    --max_length 512
+```
+
+**Time:** ~2 hours
+
+---
+
+### Step 5: Evaluate V2-r8
+
+```python
+!python evaluate.py \
+    --model_path /kaggle/working/outputs_r8/final_model \
+    --num_samples 100
+
+# Zip model
+!cd /kaggle/working && zip -r bug_classifier_v2_r8.zip outputs_r8/final_model/
+
+# Save results
+!cp evaluation_results.json evaluation_results_v2_r8.json
+```
+
+**Download:** bug_classifier_v2_r8.zip, evaluation_results_v2_r8.json
+
+---
+
+### Step 6: Train V2-r16 (High Rank)
+
+```python
+# V2-r16: Higher capacity
+!python train.py \
+    --train_path /kaggle/input/data-split/train_improved.jsonl \
+    --val_path /kaggle/input/data-split/val.jsonl \
+    --output_dir /kaggle/working/outputs_r16 \
+    --lora_r 16 \
+    --lora_alpha 64 \
+    --num_epochs 3 \
+    --batch_size 4 \
+    --learning_rate 2e-4 \
+    --max_length 512
+```
+
+**Time:** ~2 hours
+
+---
+
+### Step 7: Evaluate V2-r16
+
+```python
+!python evaluate.py \
+    --model_path /kaggle/working/outputs_r16/final_model \
+    --num_samples 100
+
+# Zip model
+!cd /kaggle/working && zip -r bug_classifier_v2_r16.zip outputs_r16/final_model/
+
+# Save results
+!cp evaluation_results.json evaluation_results_v2_r16.json
+```
+
+**Download:** bug_classifier_v2_r16.zip, evaluation_results_v2_r16.json
+
+</details>
+
+---
+
+### Step 2-OLD: Compare Results
+
+Once all evaluations complete, run locally:
 2. Evaluates V2-r4 (100 samples) → 20 mins
 3. Trains V2-r8 (r=8, α=32) → 2 hours
 4. Evaluates V2-r8 (100 samples) → 20 mins
@@ -135,24 +229,24 @@ Run each configuration separately with these commands:
 
 ```python
 # V2-r4: Lower capacity
-!python train.py --train_path /kaggle/input/data-splits/train_improved.jsonl \
-    --val_path /kaggle/input/data-splits/val.jsonl --output_dir /kaggle/working/outputs_r4 \
+!python train.py --train_path /kaggle/input/data-split/train_improved.jsonl \
+    --val_path /kaggle/input/data-split/val.jsonl --output_dir /kaggle/working/outputs_r4 \
     --lora_r 4 --lora_alpha 16 --num_epochs 3 --batch_size 4 --learning_rate 2e-4 --max_length 512
 !cd /kaggle/working && zip -r bug_classifier_v2_r4.zip outputs_r4/final_model/
 !python evaluate.py --model_path /kaggle/working/outputs_r4/final_model --num_samples 100
 !cp evaluation_results.json evaluation_results_v2_r4.json
 
 # V2-r8: Baseline
-!python train.py --train_path /kaggle/input/data-splits/train_improved.jsonl \
-    --val_path /kaggle/input/data-splits/val.jsonl --output_dir /kaggle/working/outputs_r8 \
+!python train.py --train_path /kaggle/input/data-split/train_improved.jsonl \
+    --val_path /kaggle/input/data-split/val.jsonl --output_dir /kaggle/working/outputs_r8 \
     --lora_r 8 --lora_alpha 32 --num_epochs 3 --batch_size 4 --learning_rate 2e-4 --max_length 512
 !cd /kaggle/working && zip -r bug_classifier_v2_r8.zip outputs_r8/final_model/
 !python evaluate.py --model_path /kaggle/working/outputs_r8/final_model --num_samples 100
 !cp evaluation_results.json evaluation_results_v2_r8.json
 
 # V2-r16: Higher capacity
-!python train.py --train_path /kaggle/input/data-splits/train_improved.jsonl \
-    --val_path /kaggle/input/data-splits/val.jsonl --output_dir /kaggle/working/outputs_r16 \
+!python train.py --train_path /kaggle/input/data-split/train_improved.jsonl \
+    --val_path /kaggle/input/data-split/val.jsonl --output_dir /kaggle/working/outputs_r16 \
     --lora_r 16 --lora_alpha 64 --num_epochs 3 --batch_size 4 --learning_rate 2e-4 --max_length 512
 
 **📝 MANUAL METHOD (if needed):**

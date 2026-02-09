@@ -258,7 +258,7 @@ def main():
     parser.add_argument(
         "--test_path",
         type=str,
-        required=True,
+        default="/kaggle/input/data-split/test.jsonl",
         help="Path to test.jsonl"
     )
     parser.add_argument(
