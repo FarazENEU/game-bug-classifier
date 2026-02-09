@@ -60,9 +60,8 @@ Base classification on context and impact, not just keywords."""
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
-                max_new_tokens=150,
-                temperature=0.3,  # Low temperature for consistency
-                do_sample=True,
+                max_new_tokens=80,  # Reduced - labels are ~50 tokens
+                do_sample=False,  # Greedy decoding (faster, deterministic)
                 pad_token_id=tokenizer.eos_token_id
             )
         
