@@ -143,6 +143,19 @@ def evaluate_baseline(model, tokenizer, test_path, num_samples=100):
     }
     
     for i, example in enumerate(tqdm(test_data, desc="Evaluating")):
+        # Parse input to extract title and description
+        input_text = example['input']
+        title = ""
+        description = ""
+        
+        if "Title:" in input_text and "Description:" in input_text:
+            parts = input_text.split("Description:", 1)
+            title = parts[0].replace("Title:", "").strip()
+            description = parts[1].strip() if len(parts) > 1 else ""
+        else:
+            # Fallback: use entire input as description
+            description = input_text
+        
         # Parse expected output
         expected_output = example['output'].strip()
         expected = {}
@@ -155,7 +168,7 @@ def evaluate_baseline(model, tokenizer, test_path, num_samples=100):
                 expected['reproducibility'] = line.split(':', 1)[1].strip().lower()
         
         # Get model prediction
-        prompt = format_prompt(example['title'], example['description'])
+        prompt = format_prompt(title, description)
         inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512)
         inputs = {k: v.to(model.device) for k, v in inputs.items()}
         
@@ -165,7 +178,7 @@ def evaluate_baseline(model, tokenizer, test_path, num_samples=100):
                 max_new_tokens=100,
                 do_sample=False,
                 pad_token_id=tokenizer.eos_token_id,
-                temperature=1.0,
+                tempetitle
             )
         
         generated = tokenizer.decode(
