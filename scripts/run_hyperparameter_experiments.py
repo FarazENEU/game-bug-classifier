@@ -77,8 +77,8 @@ def main():
         print(f"{'='*70}\n")
         
         # Training
-        # Note: train.py should be in same directory (both uploaded to /kaggle/working/)
-        train_cmd = f"""python train.py \
+        # Note: Assumes scripts are uploaded to /kaggle/working/scripts/
+        train_cmd = f"""python scripts/train.py \
             --train_path /kaggle/input/data-split/train_improved.jsonl \
             --val_path /kaggle/input/data-split/val.jsonl \
             --output_dir {exp['output_dir']} \
@@ -104,7 +104,7 @@ def main():
         time.sleep(5)  # Give time to read the message
         
         # Evaluation
-        eval_cmd = f"""python evaluate.py \
+        eval_cmd = f"""python scripts/evaluate.py \
             --model_path {exp['output_dir']}/final_model \
             --num_samples 100"""
         
