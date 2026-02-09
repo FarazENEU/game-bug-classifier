@@ -78,8 +78,8 @@ Base classification on context and impact, not just keywords."""
 def main():
     # Configuration
     MODEL_ID = "mistralai/Mistral-7B-Instruct-v0.2"
-    TRAIN_PATH = "./train.jsonl"  # Kaggle path
-    OUTPUT_PATH = "./train_improved.jsonl"
+    TRAIN_PATH = "/kaggle/input/data-splits/train.jsonl"
+    OUTPUT_PATH = "/kaggle/working/train_improved.jsonl"
     
     print("="*70)
     print("🔬 LABEL QUALITY IMPROVEMENT (FREE)")

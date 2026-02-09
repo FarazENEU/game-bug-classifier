@@ -126,9 +126,9 @@ def setup_model(model_name, use_4bit=True):
 
 def train(
     model_name="mistralai/Mistral-7B-Instruct-v0.2",
-    train_path="data/splits/train.jsonl",
-    val_path="data/splits/val.jsonl",
-    output_dir="outputs/models",
+    train_path="/kaggle/working/train_improved.jsonl",
+    val_path="/kaggle/input/data-splits/val.jsonl",
+    output_dir="/kaggle/working/outputs",
     num_epochs=3,
     batch_size=4,
     learning_rate=2e-4,
@@ -221,9 +221,9 @@ def train(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_name", type=str, default="mistralai/Mistral-7B-Instruct-v0.2")
-    parser.add_argument("--train_path", type=str, default="data/splits/train.jsonl")
-    parser.add_argument("--val_path", type=str, default="data/splits/val.jsonl")
-    parser.add_argument("--output_dir", type=str, default="outputs/models")
+    parser.add_argument("--train_path", type=str, default="/kaggle/working/train_improved.jsonl")
+    parser.add_argument("--val_path", type=str, default="/kaggle/input/data-splits/val.jsonl")
+    parser.add_argument("--output_dir", type=str, default="/kaggle/working/outputs")
     parser.add_argument("--num_epochs", type=int, default=3)
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--learning_rate", type=float, default=2e-4)

@@ -15,10 +15,10 @@ training:
   weight_decay: 0.01
   warmup_steps: 500
   max_grad_norm: 1.0
-  
+
 # Learning rate scheduler
 lr_scheduler:
-  type: "cosine"  # Options: linear, cosine, polynomial
+  type: "cosine" # Options: linear, cosine, polynomial
   warmup_ratio: 0.1
 
 # Optimizer
@@ -42,13 +42,13 @@ evaluation:
 # Logging
 logging:
   logging_steps: 100
-  report_to: ["tensorboard", "wandb"]  # Remove wandb if not using
+  report_to: ["tensorboard", "wandb"] # Remove wandb if not using
   logging_first_step: true
 
 # Performance
 performance:
-  fp16: false              # Set true for GPU with FP16 support
-  bf16: true               # Set true for A100/H100 GPUs
+  fp16: false # Set true for GPU with FP16 support
+  bf16: true # Set true for A100/H100 GPUs
   dataloader_num_workers: 4
   dataloader_pin_memory: true
   gradient_checkpointing: true

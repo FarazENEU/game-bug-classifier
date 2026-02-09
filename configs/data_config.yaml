@@ -18,7 +18,7 @@ collection:
     - "FreeCAD/FreeCAD"
     - "minetest/minetest"
     - "OpenRCT2/OpenRCT2"
-  
+
   # Labels to filter (bug-related)
   issue_labels:
     - "bug"
@@ -26,20 +26,20 @@ collection:
     - "issue"
     - "crash"
     - "error"
-  
+
   max_issues_per_repo: 2000
   include_closed: true
-  language_filter: "en"  # English only
+  language_filter: "en" # English only
 
 # Data preprocessing
 preprocessing:
-  min_text_length: 50           # Minimum characters in bug report
-  max_text_length: 2000         # Maximum characters
+  min_text_length: 50 # Minimum characters in bug report
+  max_text_length: 2000 # Maximum characters
   remove_duplicates: true
-  filter_incomplete: true        # Remove reports without labels
+  filter_incomplete: true # Remove reports without labels
   normalize_whitespace: true
-  remove_urls: false             # Keep URLs - might be useful context
-  remove_code_blocks: false      # Keep code - important for bugs
+  remove_urls: false # Keep URLs - might be useful context
+  remove_code_blocks: false # Keep code - important for bugs
 
 # Label categories
 labels:
@@ -48,7 +48,7 @@ labels:
     high: ["high", "major", "severe", "regression"]
     medium: ["medium", "moderate", "normal"]
     low: ["low", "minor", "trivial", "cosmetic"]
-  
+
   component:
     ui: ["ui", "gui", "interface", "menu", "hud", "display"]
     gameplay: ["gameplay", "mechanics", "logic", "controls", "input"]
@@ -58,7 +58,7 @@ labels:
     performance: ["performance", "fps", "lag", "optimization", "memory"]
     save: ["save", "load", "persistence", "data"]
     other: ["misc", "other", "unknown"]
-  
+
   reproducibility:
     always: ["always", "100%", "consistent", "every time"]
     sometimes: ["sometimes", "intermittent", "occasional", "50%"]
@@ -69,5 +69,5 @@ splits:
   train: 0.7
   validation: 0.15
   test: 0.15
-  stratify_by: "severity"  # Ensure balanced severity across splits
+  stratify_by: "severity" # Ensure balanced severity across splits
   random_seed: 42
