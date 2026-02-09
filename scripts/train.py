@@ -70,9 +70,10 @@ def tokenize_function(example, tokenizer, max_length=512):
     
     return tokenized
 
-def setup_model(model_name, use_4bit=True):
+def setup_model(model_name, lora_r=8, lora_alpha=32, use_4bit=True):
     """Load and setup model with LoRA"""
     print(f"\n🤖 Loading model: {model_name}")
+    print(f"   LoRA config: r={lora_r}, α={lora_alpha}, α/r={lora_alpha/lora_r:.1f}")
     
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -111,8 +112,8 @@ def setup_model(model_name, use_4bit=True):
     
     # Setup LoRA
     peft_config = LoraConfig(
-        r=8,
-        lora_alpha=32,
+        r=lora_r,
+        lora_alpha=lora_alpha,
         lora_dropout=0.1,
         bias="none",
         task_type="CAUSAL_LM",
@@ -133,6 +134,8 @@ def train(
     batch_size=4,
     learning_rate=2e-4,
     max_length=512,
+    lora_r=8,
+    lora_alpha=32,
 ):
     """Main training function"""
     
@@ -144,7 +147,7 @@ def train(
     train_dataset, val_dataset = load_data(train_path, val_path)
     
     # Setup model
-    model, tokenizer = setup_model(model_name, use_4bit=True)
+    model, tokenizer = setup_model(model_name, lora_r=lora_r, lora_alpha=lora_alpha, use_4bit=True)
     
     # Tokenize datasets
     print("\n🔤 Tokenizing datasets...")
@@ -228,6 +231,8 @@ if __name__ == "__main__":
     parser.add_argument("--batch_size", type=int, default=4)
     parser.add_argument("--learning_rate", type=float, default=2e-4)
     parser.add_argument("--max_length", type=int, default=512)
+    parser.add_argument("--lora_r", type=int, default=8, help="LoRA rank (number of low-rank dimensions)")
+    parser.add_argument("--lora_alpha", type=int, default=32, help="LoRA alpha (scaling factor)")
     
     args = parser.parse_args()
     
@@ -240,4 +245,6 @@ if __name__ == "__main__":
         batch_size=args.batch_size,
         learning_rate=args.learning_rate,
         max_length=args.max_length,
+        lora_r=args.lora_r,
+        lora_alpha=args.lora_alpha,
     )
