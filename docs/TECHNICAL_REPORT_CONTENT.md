@@ -201,9 +201,9 @@ Frequency information matters for severity assessment.
 
 All major technical decisions documented with rationale:
 
-| Decision | Value | Primary Reason | Tradeoff |
-|----------|-------|----------------|----------|
-| Base3 Label Improvement via Bootstrapping (V1 → V2)
+| Decision                                            | Value | Primary Reason | Tradeoff |
+| --------------------------------------------------- | ----- | -------------- | -------- |
+| Base3 Label Improvement via Bootstrapping (V1 → V2) |
 
 **Motivation:** V1 achieved only 41.86% severity accuracy (barely better than 25% random baseline), indicating keyword labels were contextually misleading.
 
@@ -476,11 +476,11 @@ As LLMs become more capable and parameter-efficient fine-tuning more accessible,
 
 **Not completed due to time constraints, but recommended for future iterations:**
 
-| Configuration | Severity | Component | Reproducibility | Overall | Training Time |
-|---------------|----------|-----------|-----------------|---------|---------------|
-| r=4, α=16 | TBD | TBD | TBD | TBD | ~1.5 hours |
-| **r=8, α=32** (ours) | **[V2]** | **[V2]** | **[V2]** | **[V2]** | **2 hours** |
-| r=16, α=64 | TBD | TBD | TBD | TBD | ~2.5 hours |
+| Configuration        | Severity | Component | Reproducibility | Overall  | Training Time |
+| -------------------- | -------- | --------- | --------------- | -------- | ------------- |
+| r=4, α=16            | TBD      | TBD       | TBD             | TBD      | ~1.5 hours    |
+| **r=8, α=32** (ours) | **[V2]** | **[V2]**  | **[V2]**        | **[V2]** | **2 hours**   |
+| r=16, α=64           | TBD      | TBD       | TBD             | TBD      | ~2.5 hours    |
 
 ### Appendix B: Error Analysis Examples (To Complete After V2 Eval)
 

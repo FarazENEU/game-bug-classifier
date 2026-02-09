@@ -166,13 +166,13 @@ Run each configuration separately with these commands:
 
 ### Results Table
 
-| Config            | Severity | Component | Repro  | Overall | Train Loss | Params |
-| ----------------- | -------- | --------- | ------ | ------- | ---------- | ------ |
-| Zero-shot (base)  | __%      | __%       | __%    | __%     | N/A        | 0      |
-| V1 (keyword)      | 41.86%   | 62.79%    | 88.37% | 64.34%  | 1.3216     | 16M    |
-| V2-r4             | __%      | __%       | __%    | __%     | __         | 8M     |
-| V2-r8             | __%      | __%       | __%    | __%     | __         | 16M    |
-| V2-r16            | __%      | __%       | __%    | __%     | __         | 32M    |
+| Config           | Severity | Component | Repro  | Overall | Train Loss | Params |
+| ---------------- | -------- | --------- | ------ | ------- | ---------- | ------ |
+| Zero-shot (base) | __%      | __%       | __%    | __%     | N/A        | 0      |
+| V1 (keyword)     | 41.86%   | 62.79%    | 88.37% | 64.34%  | 1.3216     | 16M    |
+| V2-r4            | __%      | __%       | __%    | __%     | __         | 8M     |
+| V2-r8            | __%      | __%       | __%    | __%     | __         | 16M    |
+| V2-r16           | __%      | __%       | __%    | __%     | __         | 32M    |
 
 ### Key Findings to Document
 

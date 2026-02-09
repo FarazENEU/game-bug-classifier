@@ -13,11 +13,11 @@ Systematically evaluate LoRA rank (r) to find optimal balance between model expr
 
 ### Configurations Tested
 
-| Config | r | α | α/r | Trainable Params | Learning Rate | Batch Size | Epochs |
-|--------|---|---|-----|------------------|---------------|------------|--------|
-| **V2-r4** | 4 | 16 | 4.0 | ~8M | 2e-4 | 4×4=16 | 3 |
-| **V2 (baseline)** | 8 | 32 | 4.0 | ~16M | 2e-4 | 4×4=16 | 3 |
-| **V2-r16** | 16 | 64 | 4.0 | ~32M | 2e-4 | 4×4=16 | 3 |
+| Config            | r   | α   | α/r | Trainable Params | Learning Rate | Batch Size | Epochs |
+| ----------------- | --- | --- | --- | ---------------- | ------------- | ---------- | ------ |
+| **V2-r4**         | 4   | 16  | 4.0 | ~8M              | 2e-4          | 4×4=16     | 3      |
+| **V2 (baseline)** | 8   | 32  | 4.0 | ~16M             | 2e-4          | 4×4=16     | 3      |
+| **V2-r16**        | 16  | 64  | 4.0 | ~32M             | 2e-4          | 4×4=16     | 3      |
 
 **Held Constant:**
 - Learning rate: 2e-4 (LoRA standard)
@@ -201,12 +201,12 @@ Overall:         XX.XX%
 
 ### Performance Summary
 
-| Configuration | Severity | Component | Reproducibility | Overall | Training Loss | Params |
-|---------------|----------|-----------|-----------------|---------|---------------|--------|
-| **V1 (baseline)** | 41.86% | 62.79% | 88.37% | 64.34% | 1.3216 | 16M |
-| **V2-r4** | [FILL] | [FILL] | [FILL] | [FILL] | [FILL] | 8M |
-| **V2 (r=8)** | [FILL] | [FILL] | [FILL] | [FILL] | [FILL] | 16M |
-| **V2-r16** | [FILL] | [FILL] | [FILL] | [FILL] | [FILL] | 32M |
+| Configuration     | Severity | Component | Reproducibility | Overall | Training Loss | Params |
+| ----------------- | -------- | --------- | --------------- | ------- | ------------- | ------ |
+| **V1 (baseline)** | 41.86%   | 62.79%    | 88.37%          | 64.34%  | 1.3216        | 16M    |
+| **V2-r4**         | [FILL]   | [FILL]    | [FILL]          | [FILL]  | [FILL]        | 8M     |
+| **V2 (r=8)**      | [FILL]   | [FILL]    | [FILL]          | [FILL]  | [FILL]        | 16M    |
+| **V2-r16**        | [FILL]   | [FILL]    | [FILL]          | [FILL]  | [FILL]        | 32M    |
 
 ### Key Findings
 
