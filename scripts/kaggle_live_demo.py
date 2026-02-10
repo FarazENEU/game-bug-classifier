@@ -21,6 +21,7 @@ def main():
     print("\n" + "="*70)
     print("🎬 LIVE INFERENCE DEMO - Bug Classification with QLoRA Fine-Tuned Mistral-7B")
     print("="*70)
+    print(f"Current directory: {os.getcwd()}")
     
     # Show the sample bug
     print("\n📝 Sample Bug Report:")
@@ -32,31 +33,35 @@ def main():
     # Load model (this part can be edited out of video)
     print("\n🔄 Loading fine-tuned model...")
     print("   Base: mistralai/Mistral-7B-Instruct-v0.2")
-    print("   Adapter: final_model/outputs/final_model")
     print("   Method: QLoRA (4-bit quantization)")
     
     # Check multiple possible locations for the model
     possible_paths = [
-        "/kaggle/working/final_model/outputs/final_model",  # If uploaded to working dir
+        "/kaggle/working/game-bug-classifier/final_model/outputs/final_model",  # Full path in cloned repo
+        "/kaggle/working/final_model/outputs/final_model",  # If uploaded separately
         "/kaggle/input/llm-bug-classifier-v1/final_model/outputs/final_model",  # If added as dataset
-        "final_model/outputs/final_model",  # Relative path
+        os.path.join(os.getcwd(), "final_model/outputs/final_model"),  # Relative to current directory
     ]
     
     model_path = None
     for path in possible_paths:
-        try:
-            if os.path.exists(path):
+        if os.path.exists(path):
+            # Check if adapter files exist
+            adapter_config = os.path.join(path, "adapter_config.json")
+            adapter_model = os.path.join(path, "adapter_model.safetensors")
+            if os.path.exists(adapter_config) and os.path.exists(adapter_model):
                 model_path = path
                 print(f"   Found model at: {path}")
                 break
-        except:
-            continue
     
     if not model_path:
         print("\n❌ Model not found! Tried:")
         for path in possible_paths:
-            print(f"   - {path}")
-        print("\n💡 Upload your trained model to Kaggle or add it as a dataset.")
+            exists = "✓" if os.path.exists(path) else "✗"
+            print(f"   {exists} {path}")
+        print("\n💡 Make sure you're running from the repository directory:")
+        print("   cd /kaggle/working/game-bug-classifier")
+        print("   python scripts/kaggle_live_demo.py")
         return
     
     try:

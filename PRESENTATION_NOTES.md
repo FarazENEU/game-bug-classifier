@@ -104,9 +104,17 @@ peft_config = LoraConfig(
 
 **Screen 5:** Kaggle notebook - create new code cell
 
-**Paste and run:**
+**First, change to repo directory and verify model exists:**
 ```python
-!python /kaggle/working/scripts/kaggle_live_demo.py
+import os
+os.chdir('/kaggle/working/game-bug-classifier')
+print(f"Current directory: {os.getcwd()}")
+!ls -la final_model/outputs/final_model
+```
+
+**Then run the demo:**
+```python
+!python scripts/kaggle_live_demo.py
 ```
 
 **Say BEFORE running:**
@@ -125,17 +133,6 @@ peft_config = LoraConfig(
 - "Component: graphics - GPU memory and textures"
 - "Reproducibility: always - 100% reproduction rate"
 - "This shows the model learned to understand bug patterns from context, not just keywords"
-
-**Alternative if showing evaluation results instead:**
-```python
-# If you prefer faster demo without model loading
-import json
-with open("/kaggle/working/outputs_v3_r8/evaluation_results.json") as f:
-    data = json.load(f)
-for i, pred in enumerate(data["predictions"][:3], 1):
-    print(f"Example {i}: {pred['input'][:100]}...")
-    print(f"Predicted: {pred['predicted']}")
-```
 
 ---
 
