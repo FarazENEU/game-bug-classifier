@@ -21,7 +21,7 @@ This project fine-tunes Mistral-7B-Instruct using QLoRA (Quantized Low-Rank Adap
 
 ## 🎓 Academic Context
 
-This is a course project for **COMP 7375 - Advanced Machine Learning** demonstrating:
+This is a course project demonstrating:
 - Parameter-efficient fine-tuning (PEFT) with limited compute resources
 - Multi-task classification with structured outputs
 - Bootstrapped labeling for specialized domains
@@ -177,12 +177,12 @@ python scripts/train.py --lora_r 16 --lora_alpha 64 --output_dir outputs_r16
 
 ## 📊 Results Summary
 
-| Configuration | Severity | Component | Reproducibility | **Overall** |
-|--------------|----------|-----------|-----------------|-------------|
-| Baseline (zero-shot) | 1.00% | 0.00% | 0.00% | **0.33%** |
-| V1-r4 (1 epoch) | 47.92% | 62.50% | 69.47% | **59.96%** |
-| V1-r8 (3 epochs) | 41.86% | 62.79% | 88.37% | **64.34%** ✓ |
-| V1-r16 (1 epoch) | 48.94% | 61.70% | 69.15% | **59.93%** |
+| Configuration        | Severity | Component | Reproducibility | **Overall**  |
+| -------------------- | -------- | --------- | --------------- | ------------ |
+| Baseline (zero-shot) | 1.00%    | 0.00%     | 0.00%           | **0.33%**    |
+| V1-r4 (1 epoch)      | 47.92%   | 62.50%    | 69.47%          | **59.96%**   |
+| V1-r8 (3 epochs)     | 41.86%   | 62.79%    | 88.37%          | **64.34%** ✓ |
+| V1-r16 (1 epoch)     | 48.94%   | 61.70%    | 69.15%          | **59.93%**   |
 
 **Key findings:**
 - r=8 with 3 epochs achieved best performance
