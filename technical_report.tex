@@ -83,13 +83,13 @@ Applied keyword heuristics for initial labels:
 \textbf{QLoRA Configuration:}
 \begin{itemize}[leftmargin=*,noitemsep]
     \item Quantization: 4-bit NF4 (reduces memory 28GB$\rightarrow$7GB)
-    \item LoRA: $r=8$, $\alpha=32$ (16M trainable = 0.2\% of model)
+    \item LoRA: Rank $r \in \{4, 8, 16\}$, $\alpha=4r$ (8M-32M trainable = 0.1-0.4\% of model)
     \item Target modules: Attention layers (q\_proj, k\_proj, v\_proj, o\_proj)
-    \item Memory: $\sim$13GB total (fits 2$\times$ T4 15GB GPUs)
+    \item Memory: $\sim$13GB total (fits T4 15GB GPU)
 \end{itemize}
 
 \textbf{Hyperparameters:}
-Learning rate 2e-4, batch size 16 (4 per-device $\times$ 4 gradient accumulation), 3 epochs, max length 512 tokens (85\% coverage), AdamW optimizer with cosine annealing and 10\% warmup. Training time: $\sim$4.5 hours on Kaggle's free T4 GPU (30-hour weekly quota).
+Learning rate 2e-4, batch size 16 (4 per-device $\times$ 4 gradient accumulation), 1-3 epochs depending on experiment, max length 512 tokens (85\% coverage), AdamW optimizer with cosine annealing and 10\% warmup. Training time: $\sim$1.5 hours per epoch on Kaggle's free T4 GPU (30-hour weekly quota).
 
 \subsection{Design Decisions and Alternatives Considered}
 
@@ -114,13 +114,13 @@ Learning rate 2e-4, batch size 16 (4 per-device $\times$ 4 gradient accumulation
 
 \textbf{Hyperparameter Justifications:}
 
-\textbf{LoRA Rank r=8, Alpha $\alpha$=32:}
+\textbf{LoRA Rank Selection:}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{r=8 sweet spot:} 16M parameters (0.2\% of model) balances expressiveness vs overfitting
-    \item r=4 too limited for multi-task learning (severity + component + reproducibility)
-    \item r=16 risks overfitting on 1,399 examples with diminishing returns
-    \item \textbf{$\alpha$=32:} Scaling factor $\alpha$/r=4.0 gives LoRA updates sufficient influence vs frozen weights
-    \item Standard practice: $\alpha$=2r (Hu et al., 2021)
+    \item \textbf{Experimented with $r \in \{4, 8, 16\}$} to find optimal capacity for this dataset size
+    \item \textbf{$\alpha=4r$ scaling:} Maintains consistent LoRA influence across ranks (Hu et al., 2021)
+    \item r=4: 8M parameters (0.1\%), r=8: 16M (0.2\%), r=16: 32M (0.4\%)
+    \item \textbf{Hypothesis:} r=8 balances expressiveness vs overfitting for 1,399 examples
+    \item Results validated in Section 3.4: r=8 with 3 epochs achieved best performance
 \end{itemize}
 
 \textbf{Learning Rate 2e-4 with Cosine Schedule:}
@@ -139,12 +139,12 @@ Learning rate 2e-4, batch size 16 (4 per-device $\times$ 4 gradient accumulation
     \item Larger batches (8+) exceed VRAM; smaller (<16 effective) cause noisy gradients
 \end{itemize}
 
-\textbf{3 Epochs ($\sim$2 hours):}
+\textbf{Training Epochs (1-3 depending on experiment):}
 \begin{itemize}[leftmargin=*,noitemsep]
-    \item \textbf{Convergence:} Loss plateaus after $\sim$200 steps (2.3 epochs), 3 epochs ensures full convergence
+    \item \textbf{V1-r8:} 3 epochs ($\sim$4.5 hours) - full convergence with loss plateau after $\sim$200 steps
+    \item \textbf{V1-r4, V1-r16:} 1 epoch ($\sim$1.5 hours) - time-constrained due to Kaggle's 30-hour weekly quota
     \item \textbf{Overfitting prevention:} Validation loss increases after epoch 3 in preliminary tests
-    \item 1-2 epochs: Underfitting (loss still decreasing); 5+ epochs: Overfitting (memorization)
-    \item Time tradeoff: 2 epochs = 80\% quality, 3 epochs = 95\% quality, 5 epochs = 96\% quality (diminishing returns)
+    \item Time constraint motivated rank experiments with single epochs to stay within quota
 \end{itemize}
 
 \textbf{Max Length 512 Tokens:}
