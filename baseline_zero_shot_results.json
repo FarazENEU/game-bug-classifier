@@ -1,0 +1,2528 @@
+{
+  "severity": {
+    "correct": 1,
+    "total": 100
+  },
+  "component": {
+    "correct": 0,
+    "total": 100
+  },
+  "reproducibility": {
+    "correct": 0,
+    "total": 100
+  },
+  "predictions": [
+    {
+      "id": 0,
+      "title": "Fix buttons in `EditorProperty` overlapping with values",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\n- Bug Report\n\n**Analysis:**\n\n1. **Title:**\n   The title of the bug report is clear and concise, indicating that there is an issue with the overlapping of buttons in the `EditorProperty` and the values.\n\n2. **Description:**\n   The description of the bug report provides context about the problem and the proposed solution. It also includes before and after screenshots to help illustrate the issue.\n\n3"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 1,
+      "title": "clean up shader cache errors",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to a programming issue in a shader cache. The report describes an objective to name error types more accurately, specifically distinguishing between shader cache errors and pipeline cache errors. The solution proposed is to put a specific error (Naga error) in a Box to make the error type smaller and satisfy Clippy (a code linter). The testing phase involves running examples to ensure the solution resolves the issue.\n\n#### Structured Analysis"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 2,
+      "title": "\u600e\u4e48\u73a9",
+      "expected": {
+        "severity": "medium",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is classified as an \"Unclear\" or \"Invalid\" report due to the following reasons:\n\n1. The title is written in Chinese, which may not be easily understood by the development team.\n2. The description is incomplete and lacks clear steps to reproduce the issue.\n3. The Luanti version number is not valid.\n4. The operating system and version, CPU model, GPU model, and active renderer are not"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 3,
+      "title": "Bump actions/cache from 4 to 5",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is not a bug report but rather an announcement or release note for an update to the `actions/cache` package.\n\n**Structured Analysis:**\n\n- **Title:** The title of the bug report indicates that the version of `actions/cache` is being bumped from 4 to 5.\n- **Description:** The description provides details about the release, including the release notes and changes made in the update.\n- **Release"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 4,
+      "title": "Instant fallback fix for aarch64",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Bug Report\n\nAnalysis:\n\n1. **Title**: The title of the bug report is \"Instant fallback fix for aarch64\". It indicates that the issue is related to the `Instant` fallback implementation in the `bevy_platform` library on ARM CPUs, specifically for Apple Silicon.\n\n2. **Objective**: The objective of the report is to address a bug in the `Instant` fallback implementation on"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 5,
+      "title": "[ba1ca5] openrct2.exe: OpenRCT2::TileElementBase::GetBaseZ",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "<br /><b>1</b> unique occurrence<br /><b>1</b> affected user<br /><b>1</b> affected session<br /><br /><b>OS:</b> Windows 10<br /><b>Browser:</b> Unknown<br /><b>Device:</b> Unknown<br /><b>Language:</b> English (United States)<br /><b>"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 6,
+      "title": "increaese influencers per vertex on a skinned mesh",
+      "expected": {
+        "severity": "medium",
+        "component": "save",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to a limitation in Bevy's skinned mesh feature. It describes an issue where a skinned mesh with more than the supported number of joint/weight attribute sets causes some vertices to have effectively zero skinning weights, resulting in them collapsing to (0,0,0) during animation.\n\n**Structured Analysis:**\n\n1. **Bevy version and features:**\n   - The bug report does not provide"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 7,
+      "title": "Optimize `core/input/input.h` header `#include`ing",
+      "expected": {
+        "severity": "low",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nPerformance Improvement\n\n**Structured Analysis:**\n\n1. **Title:**\n   The title of the bug report suggests that the issue is related to optimizing the `#include`ing of the `input.h` header in the Godot engine.\n\n2. **Description:**\n   - The description mentions that modifying the `input.h` header results in a long compilation time, specifically 50 minutes, for the Windows"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 8,
+      "title": "Fix shader compilation fail when using visibility range",
+      "expected": {
+        "severity": "medium",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to a shader compilation issue when using both deferred rendering and visibility range.\n\n**Analysis:**\n1. **Description:**\n   The user is encountering a shader compilation failure when using both deferred rendering and visibility range. The specific shader that fails to compile is `pbr.wgsl`. The issue is caused by the fact that `pbr_functions` is not imported in this context.\n\n2"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 9,
+      "title": "Fix minimap centering and marker alignment (#22792)",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": "** The issue addressed in this bug report pertains to the **Minimap and HUD** components of",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Type:** Bug Fix\n- **Component:** Minimap and HUD\n\n#### Structured Analysis:\n\n**Title:** Fix minimap centering and marker alignment (#22792)\n\n**Type:** This bug report describes a fix for an existing issue, making it a **Bug Fix**.\n\n**Component:** The issue addressed in this bug report pertains to the **Minimap and HUD** components of"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 10,
+      "title": "Scenes created in 4.5.1-stable do not export deterministically in 4.6-stable unless you re-save them",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to the export functionality of Godot Engine. It describes an issue where scenes created in a previous version (4.5.1) do not export deterministically in the current version (4.6.stable). The issue is caused by a non-deterministic ID generation for new `unique_id` that's added to every scene node.\n\n#### Structured Analysis:\n\n1. **Tested versions:**"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 11,
+      "title": "Prevent loading of mods with invalid names",
+      "expected": {
+        "severity": "medium",
+        "component": "save",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Fix\n\n**Analysis:**\n\nThis bug report describes an issue where mods with invalid names are being loaded, and the goal of the proposed pull request (PR) is to prevent this from happening and log a warning when an invalid name is detected. The PR achieves this by updating the `parseModContents` function to check for invalid characters in the mod name during the loading process and log a warning and skip the mod if an invalid character is found."
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 12,
+      "title": "Mouse jitter on MacOS (Others systems yet to test)",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report can be classified as a \"Hardware Compatibility Issue\" or \"Mouse Input Issue\". The issue is specific to a certain hardware (external mouse) and operating system (MacOS), and it doesn't occur when using the built-in mousepad.\n\n#### Structured Analysis:\n1. **Luanti version**: The Luanti version reported is 5.11.0.\n2. **Operating system and version**:"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 13,
+      "title": "Compatibility: Validate arguments when assigning lightmap textures",
+      "expected": {
+        "severity": "medium",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": "**",
+        "component": "**",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Component:** Lightmap\n- **Severity:** Medium\n- **Type:** Bug\n\n#### Structured Analysis:\n\n**Title:**\nThe title of the bug report indicates that the issue is related to the compatibility of lightmap textures.\n\n**Component:**\nThe component affected by the bug is the Lightmap system.\n\n**Severity:**\nThe severity of the bug is medium as it can cause errors in"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 14,
+      "title": "RCT 1 Intro sequence skipping read error with RCTC",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to the OpenRCT2 emulator and the RollerCoaster Tycoon Classic base game. The issue is that during the intro sequence, the emulator is trying to load scenarios from the RCTC scenarios folder instead of the RCT1 original scenarios folder.\n\n#### Structured Analysis:\n1. **Environment:**\n   - Operating System: Any\n   - OpenRCT2 build: v0.4."
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 15,
+      "title": "Clarify that punch toolcaps are not optional",
+      "expected": {
+        "severity": "medium",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- Bug Report\n\n#### Structured Analysis:\n\n**Title:**\nThe title of the bug report suggests that there is an issue with the behavior of the punch toolcaps in the software. The title is clear and concise, indicating that the focus of the report is to clarify that punch toolcaps are not optional.\n\n**Description:**\nThe description of the bug report provides some context about the issue, including a link to a related pull request and"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 16,
+      "title": "OpenGL3: Add subpixel offset for 2D image rendering",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to the rendering of 2D images using OpenGL 3 pipeline in Irrlicht engine. The issue is that the pixel coordinates are being calculated precisely on the pixel boundaries instead of the center of the pixels, leading to rendering issues. The proposed solution is to add a subpixel offset, identical to the one used in the shader code for the Fixed Function Pipeline, in the C++ Irrlicht code instead of modifying the"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 17,
+      "title": "[1a7c41] openrct2.com: linenoise::refreshMultiLine",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "<br /><br /><b>openrct2.com</b> <b>[1.0.0-rc1]</b> <b>(</b><b>Linux</b><b>)</b> <b>[x86_64]</b> <b>[</b><b>Ubuntu 20.04.3 LTS</b><b>]</b> <b"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 18,
+      "title": "More than ~384 stalls in tab causes issues",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report can be classified as a \"Performance\" issue. The root cause of the problem is the game's inability to handle a large number of buttons (stalls) in the Shops & Stalls tab, leading to freezing or unresponsiveness.\n\n#### Structured Analysis:\n\n1. **Operating System**: Windows 11, 64 bit\n2. **Game Version**: OpenRCT2 build 0"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 19,
+      "title": "Trackdata/sequence flags to flagholder",
+      "expected": {
+        "severity": "high",
+        "component": "performance",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is a **refactoring** request. The developer is proposing changes to the codebase to improve its structure and readability.\n\n#### Structured Analysis:\n1. **Description of the Issue:**\n   The developer is proposing to make changes to the codebase in three separate pull requests (PRs). The changes include renaming some enums, converting the flags field to a FlagsHolder, and renaming the flags to"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 20,
+      "title": "Fix invalid duplicate provides tag in AppStream metainfo",
+      "expected": {
+        "severity": "low",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to the AppStream metainfo validation process. It indicates that there is an error in the metainfo file due to a duplicate `<provides>` tag.\n\n**Structured Analysis:**\n\n1. **Title:**\n   The title of the bug report is \"Fix invalid duplicate provides tag in AppStream metainfo\". It clearly states that there is an issue with a duplicate `<provides>` tag in"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 21,
+      "title": "[36e7b5] openrct2.com: OpenRCT2::SmallSceneryEntry::HasFlag",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "00)<br /><b>OpenRCT2::SmallSceneryEntry::HasFlag</b> (<a href=\"https://github.com/openrct2/openrct2/blob/master/src/scenery/SmallSceneryEntry.cpp#L113\">source code</a>).<br /><b>Error message:</b> <pre>Segmentation fault (core dumped)<br />"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 22,
+      "title": "[de2726] openrct2.exe: OpenRCT2::World::MapGenerator::smoothHeightMap",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Time))<br /><b>1</b> unique occurrence<br /><b>0</b> fatal occurrences<br /><b>0</b> non-fatal occurrences<br /><b>0</b> ignored occurrences<br /><b>0</b> suppressed occurrences<br /><br /><b>OS:</b> Windows 10<br /><b>CPU:</"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 23,
+      "title": "Allow arbitrary areas for `core.generate_decorations`",
+      "expected": {
+        "severity": "medium",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Report\n\n**Analysis:**\n\nThe reported issue is related to the `core.generate_decorations` function in Luanti, which no longer supports rectangular areas for generating decorations. The problem was that if a user tries to generate decorations in a rectangle, Luanti will throw an error. The user finds this restriction annoying as it makes it difficult to write custom map generators that need decorations.\n\nThe user suggests allowing rectangle areas for this"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 24,
+      "title": "Skybox example broken",
+      "expected": {
+        "severity": "high",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Bug\n\nAnalysis:\n1. **Title**: The title of the bug report indicates that there is an issue with the Skybox example in Bevy, a 3D rendering library.\n2. **Description**: The description provides some context about the Bevy version and features, as well as the browser being used (Firefox 144.0). It also mentions that other users have reported the same issue on the official Bevy Discord.\n3"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 25,
+      "title": "`debug_symbols=yes` --> Backtrace takes too long (~a minute) (with 100% CPU used by `addr2line`)",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to the Godot game engine and its debugging capabilities. Specifically, it reports an issue with the backtrace functionality when compiling with `debug_symbols=yes`.\n\n#### Structured Analysis:\n1. **Environment:**\n   - Godot version: 4.7.dev (77579f93e)\n   - Operating System: Arch Linux\n   - Display driver: Wayland"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 26,
+      "title": "#21980 Fix Component/Relationship derive using non fully qualified path",
+      "expected": {
+        "severity": "low",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to Rust programming language and the Bevy game engine library. It describes an issue with the `derive` macro in Rust, specifically with the `relationship` and `relationship_target` macros from the Bevy library. The issue is that using a non-fully qualified path for the `Entity` type in the `Rel` and `RelTarget` structs causes a compilation error.\n\n#### Structured Analysis:"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 27,
+      "title": "Allow sneak toggling when player does not have the fly privilege",
+      "expected": {
+        "severity": "low",
+        "component": "gameplay",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Report\n\n**Analysis:**\n\nThis bug report describes an issue where a player is able to toggle sneak mode even when they do not have the fly privilege. The report suggests a fix for this issue by implementing an alternative solution. The fix is ready for review.\n\nThe testing instructions provided in the report outline the steps to reproduce the issue and test the fix. The instructions involve revoking fly mode from the player, enabling fly mode, enabling sneak togg"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 28,
+      "title": "[67ce99] RCT2.exe: std::vector<TIdentifier<unsigned short,65535,EntityIdTag>,std::allocator<TIdentifier<unsigned short,65535,EntityIdTag> > >::end",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "(s)<br /> <b>[67ce99]</b> RCT2.exe: std::vector<TIdentifier<unsigned short,65535,EntityIdTag>,std::allocator<TIdentifier<unsigned short,65535,EntityIdTag> > >::end<br /> <b>[0.000s]</b> Duration: 0.000 seconds<br"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 29,
+      "title": "Animation track path confuses to solve nested nodepaths with the same word like `Bone2D/Bone2D/Bone2D` and cause wrong result",
+      "expected": {
+        "severity": "high",
+        "component": "gameplay",
+        "reproducibility": "rare"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Animation, Bugs\n\n**Analysis:**\n\nThe reported issue is related to the Blender animation system and specifically to the behavior of bones in the Animation Player. The user has noticed that in Blender version 4.6, some bones do not follow the expected animation path, while in version 4.5 they do. The issue seems to be random and not consistently reproducible.\n\nThe user has provided images to illustrate the problem"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 30,
+      "title": "AppImage Launcher Broken",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Development issue\n\n**Analysis:**\n\nThe reported issue is related to the OpenRCT2 AppImage installer on Linux Mint 22.2. The user is unable to cancel the installation process normally when the installer requires the original RollerCoaster Tycoon 2 (RCT2) or RollerCoaster Tycoon Classic (RCTC) files but they are not present. Instead, the installer opens the \"Please select"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 31,
+      "title": "Update naga requirement from 26 to 27",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is about an update to a dependency in the project, specifically the `naga` library, to the latest version (27.0.3).\n\n**Structured Analysis:**\n\n- **Title:** The title of the bug report is descriptive and clearly states that the update is for the `naga` library to version 27.\n- **Description:** The description provides the context of the update, which is to permit"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 32,
+      "title": "Consider autogenerating bindings (and/or serde)",
+      "expected": {
+        "severity": "low",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is a feature request.\n\n#### Structured Analysis:\n1. **Problem Statement:** The current method of writing bindings and handling serialization/deserialization is verbose, error-prone, and inconsistent. This results in additional work and time spent on tasks that could be automated.\n2. **Current Solution:** The team is currently writing bindings by hand using the stack-based Lua API and helper functions. They"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 33,
+      "title": "[squash merge] Main menu: Fix ContentDB aliases for games having the '_game' suffix",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to a code change that was made using a squash merge. The change was intended to fix a previously reported issue (#16063), but the reporter did not fully test it due to not having an old installation of the affected game with contentdb.\n\n#### Structured Analysis:\n1. **Title**: The title of the bug report indicates that it is related to a squash merge. The merge was likely performed to"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 34,
+      "title": "Render resolution not updated when exiting fullscreen (SDL bug)",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to a rendering issue in the Luanti game engine when exiting fullscreen mode using the F11 key. It appears that the render resolution is not being updated correctly, as indicated by the screenshot provided.\n\n#### Structured Analysis:\n1. **Environment:**\n   - Operating System: Linux\n   - Luanti version: 5.12.0-dev-66dedf1e2-dirty"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 35,
+      "title": "[6cbe12] openrct2.exe: OpenRCT2::TileElementBase::GetBaseZ",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "00) in <b>OpenRCT2</b> (<b>64-bit</b>).</td> </tr> <tr> <td><img src=\"https://openrct2.sp.backtrace.io/images/icon-stacktrace.png\" width=\"30\" height=\"30\" /></td> <td> <pre>OpenRCT2::TileElementBase::GetBaseZ(this=0"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 36,
+      "title": "Solari: Double buffer prepass textures",
+      "expected": {
+        "severity": "critical",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to the Solari application and describes an issue with textures during the prepass stage. The issue is causing the application to crash and can be resolved by fixing the double buffer problem and avoiding the copy of textures.\n\n#### Structured Analysis:\n1. **Application**: Solari\n2. **Issue Description**: The application is crashing due to an unsupported texture format during the prepass stage. The specific error message is"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 37,
+      "title": "Improve usability of Prometheus metrics backend",
+      "expected": {
+        "severity": "low",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": "** Monitoring and Metrics (Prometheus)",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Type:** Enhancement\n- **Priority:** Medium\n- **Component:** Monitoring and Metrics (Prometheus)\n\n#### Structured Analysis:\n\n**Title:** Improve usability of Prometheus metrics backend\n\n**Description:**\nThis bug report describes an enhancement request to improve the usability of the Prometheus metrics backend in NixOS. The specific changes being proposed are related to the log messages and error"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 38,
+      "title": "Persist editor viewport splitter ratios on editor restart",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Type**: Bug Report\n- **Priority**: Medium\n- **Branch**: master\n\n#### Structured Analysis:\n\n**Title**: Persist editor viewport splitter ratios on editor restart\n\n**Description**: The editor viewport splitter ratios are not being persisted upon editor restart. This issue is relevant to the master branch.\n\n**Impact**: This issue can cause inconvenience for users who frequently adjust their editor view"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 39,
+      "title": "Restore server description in menu",
+      "expected": {
+        "severity": "low",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nFeature Request\n\n#### Structured Analysis:\n- **Title**: Restore server description in menu\n- **Type**: Feature Request\n- **Description**: The PR aims to restore the server description in the menu.\n- **Goal**: The goal of the PR is to restore the server description that was previously displayed in the menu.\n- **Approach**: The PR works by restoring the description from the server object returned by `find_selected_server"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 40,
+      "title": "Update re-spirv with more derivative operations.",
+      "expected": {
+        "severity": "high",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Enhancement\n\n**Reasoning:** The title of the bug report suggests an update or improvement to the re-spirv library. The description mentions that the update should fix an error, but it is also stated that the errors are harmless and that the library falls back to not optimizing the shader in these cases. This indicates that the update is not strictly necessary for the proper functioning of the library, but rather an enhancement to improve its performance or capabilities"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 41,
+      "title": "[b1390f] openrct2.exe: std::vector<OpenRCT2::Widget,std::allocator<OpenRCT2::Widget> >::empty",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "MT+0000)<br /><b>openrct2.exe</b> crashed<br /><b>Process ID:</b> 12345<br /><b>OS:</b> Windows 10<br /><b>CPU:</b> Intel Core i7-7700K<br /><b>Memory:</b> 16 GB<br /><b>Graphics:</b> N"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 42,
+      "title": "Vulkan CanvasItem texture rect region performance regression in 4.6",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Performance Regression\n\n**Analysis:**\n\nThe bug report describes a performance regression issue in Godot Engine version 4.6, specifically with the Vulkan rendering backend. The issue is related to the use of `canvas_item_add_texture_rect_region` function when drawing many CanvasItems. The description provides evidence of the performance drop by comparing the frame rate in version 4.6.dev2 and 4.6.dev"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 43,
+      "title": "Small bug in TrackDesignAction?",
+      "expected": {
+        "severity": "medium",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis is a potential code improvement issue.\n\n**Analysis:**\n\n1. **Issue Description:**\n   The description suggests that there might be a redundant condition check in the `TrackDesignAction::Query` and `TrackDesignAction::Execute` methods. Specifically, the `Query` method checks for equality to `kObjectEntryIndexNull`, making the body of the conditional redundant. In contrast, the `Execute` method checks"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 44,
+      "title": "Move `RuntimeNodeSelect` to its own files",
+      "expected": {
+        "severity": "low",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Refactoring\n\n**Analysis:**\n\nThe bug report describes a refactoring effort to move certain classes from one file to their own files. The motivation behind this change is to reduce the size and complexity of the original file, `scene_debugger.cpp`, and to make it easier to maintain and extend in the future. The specific classes being moved are `RuntimeNodeSelect`, `SceneDebuggerObject`, and `SceneDebuggerTree`.\n\nThe benefits of"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 45,
+      "title": "[034f57] openrct2.exe: OpenRCT2::Scripting::ScTileElement::object_get",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "00) in <b>OpenRCT2</b> (<b>v0.5.0-dev</b>).</td> </tr> <tr> <td><img src=\"https://openrct2.sp.backtrace.io/images/icon-stacktrace.png\" width=\"30\" height=\"30\" /></td> <td> <pre>openrct2.exe: OpenRCT2"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 46,
+      "title": "SystemRunner param and macro syntax",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nFeature Request\n\n#### Analysis:\n1. **Title**: The title of the bug report suggests that the issue is related to adding a new system param and macros for system runner.\n2. **Objective**: The objective of the report is to add a new system param and macros for system runner. The report also mentions that there are some testing examples and that there is still work to be done, especially around generic code.\n3. **Description"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 47,
+      "title": "Movie Writer creates undeletable OGV file on Windows 11",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to the Movie Writer feature in Godot Engine v4.6. The user is unable to delete the output .ogv file generated by Movie Writer on Windows 11.\n\n**Analysis:**\n1. **Environment:**\n   - Godot Engine version: v4.6.stable\n   - Operating System: Windows 11\n   - Hardware: NVIDIA GeForce GTX 950,"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 48,
+      "title": "Lua error when opening keyboard settings",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to the Lua scripting language and the Minetest game engine. It describes an error that occurs when opening the keyboard settings in Minetest, which is most likely caused by a bug in the Lua script `components.lua` in the Minetest engine.\n\n#### Structured analysis:\n\n**Title:** Lua error when opening keyboard settings\n\n**Description:**\n- The report describes an error that occurs when"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 49,
+      "title": "Remove hardcoded color of infobox in /help",
+      "expected": {
+        "severity": "low",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Enhancement\n\n**Analysis:**\n\nThis bug report is actually a feature request. The reporter is suggesting a change to the existing `/help` window to make it more flexible and customizable. The current issue is that the infobox in the `/help` window has a hardcoded color, which limits the ability to style the window using the game's `set_formspec_prepend` options. The reporter argues that this"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 50,
+      "title": "Use <filesystem>?",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- Enhancement\n\n#### Structured Analysis:\nThe bug report suggests an enhancement to the current implementation of file system handling in the project. The current implementation, which is based on the `fs::*` helpers defined in `filesys.h`, is criticized for its lack of features, potential bugs, and confusion. The reporter proposes to allow the use of C++17's `<filesystem>` standard library subsystem"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 51,
+      "title": "[a17931] openrct2.exe: read_file",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "tr> <tr> <td><img src=\"https://openrct2.sp.backtrace.io/images/icon-stacktrace.png\" width=\"30\" height=\"30\" /></td> <td> <pre>openrct2.exe!0x00401733: read_file+0x13 (read_file.cpp:123)\nopenrct2.exe"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 52,
+      "title": "Fix #25628: AVX2 and SSE4 availability not detected correctly",
+      "expected": {
+        "severity": "medium",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Bug Report\n\nAnalysis:\n\n1. **Title**: The title of the bug report indicates that there is an issue related to the detection of AVX2 and SSE4 availability. The title also indicates that there is a fix for the issue.\n\n2. **Classification**: Based on the title, this is a bug report.\n\n3. **Description**: The description of the bug report indicates that the reporter was able to reproduce the issue in a debug"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 53,
+      "title": "Mesh spawned with `Disabled` remains invisible after enabling",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** 2D Rendering Bug\n\n**Analysis:**\n\nThe reported issue is related to a 2D mesh that remains invisible after being enabled. The mesh is initially spawned with the `Disabled` component, and another system is responsible for enabling the entity. The issue occurs in Bevy version 0.18.0, which uses the 2D and UI features.\n\nThe provided code snippet shows the setup of the application, including the"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 54,
+      "title": "Replace get_many_* with get_disjoint_*.",
+      "expected": {
+        "severity": "low",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": "** Low",
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Type:** Bug Fix\n- **Severity:** Low\n\n#### Structured Analysis:\n\n**Title:** Replace get_many_* with get_disjoint_*.\n\n**Objective:**\n- Fix CI after the merge of pull request #648 in the hashbrown repository.\n\n**Solution:**\n- Update the method names to match the naming convention used in hashbrown and in the Rust"
+      },
+      "predicted_normalized": {
+        "severity": "low",
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": true,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 55,
+      "title": "Fix `script_language_extension.cpp` compilation with `deprecated=no`",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": "** Medium",
+        "component": "** Scripting",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Category:** Compilation Error\n- **Severity:** Medium\n- **Component:** Scripting\n\n#### Structured Analysis:\n\n**Title:**\nThe title of the bug report indicates that there is an issue with the compilation of the `script_language_extension.cpp` file when the `deprecated=no` flag is used.\n\n**Description:**\nThe description provides more context about the issue. It mentions that there is"
+      },
+      "predicted_normalized": {
+        "severity": "medium",
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 56,
+      "title": "Godot compiled with MSVC doesn't print the backtrace when a crash happens",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to the Godot engine and its behavior when compiled with Microsoft Visual Studio Compiler (MSVC). It describes an issue where the engine fails to print a backtrace in the console after a crash.\n\n**Analysis:**\n\n1. **Affected versions:** The issue is reproducible in the stable version 4.6 and the latest master branch (77579f93e). It is not re"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 57,
+      "title": "Multiple \"Parameter \"common_parent\" is null.\" errors after switching tab with MultiplayerSynchronizer selected",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Report\n\n**Analysis:**\n\nThis bug report describes an issue that occurs when switching scenes in the editor with a MultiplayerSynchronizer node selected in Godot 4.6-stable. The error message \"Parameter \"common_parent\" is null.\" is printed multiple times. The issue is not reproduced in older versions of Godot (4.5.1-stable and 4.5.2-rc1). The issue is observed on"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 58,
+      "title": "\"Type annotations needed\" when using system piping to a system that returns a Result",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to the Rust programming language and the Bevy game engine. It describes a compilation error that occurs when using the `pipe` function from Bevy to connect two systems.\n\n#### Analysis:\nThe code in the bug report uses Bevy 0.17 with default features. The `main` function initializes a new Bevy application and adds a system `foo` to be updated using the `Update` event. The system"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 59,
+      "title": "Fix skybox example crashing in WASM by skipping unsupported TAA",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- Bug Report\n\n#### Structured Analysis:\nThis bug report describes an issue with the \"skybox example\" in the Bevy game engine not functioning as intended in WebAssembly (WASM) builds due to the lack of support for TAA (Temporal Anti-Aliasing). The reporter provides a solution to skip TAA if the build is in a WASM environment. The issue is confirmed to be resolved by testing the example locally using the"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 60,
+      "title": "Crash when applying chat kerning",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is related to a crash issue in the Luanti game, specifically in the Chat Console component, when applying chat kerning.\n\n#### Analysis:\n1. **Environment:**\n   - Luanti version: 4.6\n   - Operating system: Windows 11\n   - CPU model: Ryzen 7 3800X\n   - GPU model: RTX 2060\n   - Active render"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 61,
+      "title": "example image_node_resizing crash: duplicate component",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Report\n\n**Analysis:**\n\nThe provided bug report describes an issue with a new example added in the Bevy engine GitHub repository. The issue is a panic error, which occurs when trying to apply buffers for the `image_node_resizing::setup` system. The error message indicates that there is a duplicate component in the bundle, specifically `bevy_ui_render::debug_overlay::UiDebugOptions`.\n\nThe suggested solution is"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 62,
+      "title": "[afe5b1] openrct2.exe: ObjectManager::UnloadObject",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "))<br /><br /><b>openrct2.exe</b> crashed with signal <b>SIGSEGV</b> (Segmentation fault)<br /><br /><b>Thread:</b> <b>0x00007ff7f6e14720 (Thread 0.12345)</b><br /><br /><b>Stack trace:</b><br /><"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 63,
+      "title": "If the master server vanishes make sure to register again, cleanup",
+      "expected": {
+        "severity": "critical",
+        "component": "network",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is a **Feature Request/Improvement** with a **Medium** impact.\n\n**Analysis:**\n\n1. **Title:**\nThe title of the bug report suggests that it is related to the registration and cleanup process of the master server.\n\n2. **Description:**\n- The description explains that the code did not account for the case where the master server registration might fail to send the heartbeat and just assumed it was still"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 64,
+      "title": "Decouple TouchControls from keybinding settings",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Internal Refactoring\n\n**Analysis:**\n\nThis pull request (PR) is classified as an internal refactoring. The PR aims to decouple the `TouchControls` class from keybinding settings. To achieve this, the `KeyPress` class is refactored, and the `GameKeyType` is added to the variants of `KeyPress::scancode`. Irrlicht's user event is adjusted to include the `code`"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 65,
+      "title": "Fix using editor viewport splitters failing sometimes",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Report\n\n**Analysis:**\n\n1. **Title:** The title of the bug report is descriptive and provides a clear indication of the issue. It mentions the term \"Fix\" which suggests that this is a report of a problem that needs to be addressed.\n\n2. **Description:** The description of the bug report contains a link to a related issue in the Godot Engine repository. It also mentions that the issue was an \"off-"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 66,
+      "title": "Luanti crashes Wayland WM (hyprland)",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report can be classified as a **Graphics/Rendering** issue.\n\n#### Structured Analysis:\n\n- **Title**: Luanti crashes Wayland WM (hyprland)\n- **Description**: The user is reporting an issue where Luanti causes the Wayland Window Manager (hyprland) to crash.\n- **Luanti Version**: The user is using Luanti version 5.12.0 with LuaJIT"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 67,
+      "title": "Make bone interpolation work again",
+      "expected": {
+        "severity": "low",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": "** Medium",
+        "component": "** Animation",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Component:** Animation\n- **Severity:** Medium\n- **Type:** Regression\n\n#### Structured Analysis:\n\n**Title:** Make bone interpolation work again\n\n**Component:** Animation\n\n**Description:**\nThis bug report refers to issue #16427, which is related to bone interpolation not working properly in the animation component. The issue is described as a regression, implying that it was"
+      },
+      "predicted_normalized": {
+        "severity": "medium",
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 68,
+      "title": "Suppress convex-decompose error spam for < 3 point polygons",
+      "expected": {
+        "severity": "medium",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Enhancement\n\nAnalysis:\n\n1. **Type**: This bug report is not a bug but an enhancement request.\n2. **Description**: The developer has identified an issue where an error is being produced when a CollisionPolygon2D node is added in the editor with less than 3 points. To suppress this error, a new counter is introduced to track the total number of points and if that number is less than 3, then no error is"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 69,
+      "title": "[d12920] openrct2.exe: std::allocator<wchar_t>::deallocate",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "0200).</td> </tr> <tr> <td><pre>openrct2.exe: std::allocator<wchar_t>::deallocate:<br /> 0x00007FF77E633333 in openrct2()<br /> openrct2.exe: symbol lookup error: <b>_imp__wprintf</b>: undefined symbol</pre></td"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 70,
+      "title": "Editor spams warning \"Property not found: application/config/disable_project_settings_override\" (4.5.2-rc1)",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Bug\n\nAnalysis:\n\n1. **Classification**: This is a bug report as it describes an unexpected behavior in the Godot engine, specifically the output of a warning message that is not supposed to be displayed.\n\n2. **Reproducibility**: The issue is reproducible in the latest release candidate (4.5.2-rc1) of Godot, but not in the previous stable versions (4.5.1-stable and"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 71,
+      "title": "Push players out of solid nodes",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report falls under the category of **Gameplay** as it involves the behavior of players and objects within the game environment.\n\n#### Structured Analysis:\n1. **Description**: The report describes an issue where players and objects can end up inside non-walkable (solid) nodes despite `noclip` being disabled. This results in unexpected behavior, as solid blocks should be impenetrable.\n\n2. **Symptoms**: Players"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 72,
+      "title": "GUI crashes when entering world after successful compilation on Windows",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report describes an issue with the Luanti Game Engine where the GUI crashes when attempting to enter a world after a successful compilation on Windows.\n\n**Analysis:**\n\n1. **Summary:**\nThe user reports that the GUI crashes when trying to enter a world after a successful compilation of the Luanti Game Engine on Windows.\n\n2. **Environment:**\n- Operating System: Windows 10 (10.0."
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 73,
+      "title": "Setting FpsOverlayConfig.FrameTimeGraphConfig.enabled to true causes the application to crash.",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": "**",
+        "raw": "Classification: Bug\n\nAnalysis:\n1. **Summary:**\n   The user is reporting a crash when enabling the FrameTimeGraphConfig in the FpsOverlayConfig in the Bevy fps_overlay example on a Windows 10 Enterprise system with an NVIDIA GeForce GTX 1050 Ti GPU.\n\n2. **Reproducibility:**\n   The issue is reproducible in the Bevy fps_overlay example on a Windows"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 74,
+      "title": "Enum variant relations",
+      "expected": {
+        "severity": "medium",
+        "component": "graphics",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Feature Request\n\n**Analysis:**\n\nThe bug report is a feature request where the user is proposing a new functionality to the Bevy engine. The user wants to add a new feature to the Bevy engine to define relationships between entities using enum variants. The user provides an example of how this could be used in a graphical editor context, where entities have a hierarchy and inherited attributes like color and shape. The user suggests a possible solution by adding a new attribute"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 75,
+      "title": "The game causes a black full screen when Alt+Tabbing out of it",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report can be classified as a Graphical Glitch or Error.\n\n#### Structured Analysis:\n\n1. **Operating System:** Windows 11 Pro, 64-bit\n2. **Software:** OpenRCT2, v0.4.29 (ebe87be3da)\n3. **Base Game:** RollerCoaster Tycoon 2\n4. **Issue Description:**"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 76,
+      "title": "Missing description for `AudioStreamPlayer`'s `Looping` in the `Parameters` group",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": "**",
+        "component": "**",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Component:** Audio\n- **Severity:** Medium\n- **Type:** Documentation\n\n#### Structured Analysis:\n\n**Component:**\nThe bug report is related to the `AudioStreamPlayer` component in Godot Engine.\n\n**Severity:**\nThe issue is classified as medium severity because it affects the documentation, but it does not cause any functional issues with the component itself.\n\n**Type:**\nThe type"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 77,
+      "title": "Implement secondary keybindings [UI Proposal 2]",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nFeature Request\n\n**Analysis:**\n\n1. **Title:**\nThe title of the PR suggests that it is implementing a new feature - secondary keybindings.\n\n2. **Description:**\n- The PR description explains that it is implementing the same feature as a previous PR (#15934), but with a different UI for configuring keybindings.\n- The goal of the PR is to allow players to define secondary keybindings"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 78,
+      "title": "Only add invisible entrances to S4/S6 if they were actually used",
+      "expected": {
+        "severity": "medium",
+        "component": "save",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Bug Report\n\nAnalysis:\n\n1. **Title**: The title of the bug report is clear and concise, indicating that the issue is related to adding entrances to S4/S6 and only doing so if they were actually used.\n\n2. **Description**: The description provides additional context about the bug, specifically mentioning a related issue with SV7 imports and the entrance style selection.\n\n3. **Impact**: The impact of this bug is"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 79,
+      "title": "ViewportTexture doesn't update from SubViewport in 4.6 w/Editable Children",
+      "expected": {
+        "severity": "high",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report can be classified as a \"Rendering\" issue.\n\n#### Structured Analysis:\n\n**Title:** ViewportTexture doesn't update from SubViewport in 4.6 with Editable Children\n\n**Description:**\nThe user reports an issue with ViewportTextures not updating correctly in Godot Engine version 4.6 when using editable children. The problem is reproduced on a Windows 11 system with a dedicated N"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 80,
+      "title": "Fix typo: Missing verb (be) in SceneTree.xml",
+      "expected": {
+        "severity": "low",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Documentation Error\n\nAnalysis:\n1. The title of the bug report indicates that there is a typo in the documentation.\n2. The description confirms that there is a typo in the documentation and provides the corrected version.\n3. The typo is a missing verb (be) in the sentence 'callback methods may not called anymore.'\n4. The corrected version is 'callback methods may not be called anymore.'\n5. This is a documentation"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 81,
+      "title": "(Solved) Shape expand dropdown didn't work in 4.5 stable and later",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report describes an issue with the \"CollisionShape2D Shape\" option dropdown not expanding in Godot v4.5 stable and later on a Windows 11 system with NVIDIA GeForce RTX 4050 Laptop GPU and OpenGL API 3.3.0.\n\n**Analysis:**\n1. **Affected versions:** The issue is not present in Godot v4.4.1"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 82,
+      "title": "Guard new objects from being added at shutdown",
+      "expected": {
+        "severity": "medium",
+        "component": "network",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- Bug Report\n\n#### Structured Analysis:\n\n**Title:** Guard new objects from being added at shutdown\n\n**Description:**\n1. This is a bug report.\n2. The issue is related to preventing new objects from being added during shutdown.\n3. The issue is tracked under #16592.\n4. The PR is ready for review.\n5. Instructions on how to test the issue are provided"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 83,
+      "title": "Add insertion/removal reason to lifecycle events",
+      "expected": {
+        "severity": "critical",
+        "component": "gameplay",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Feature Request\n\n**Analysis:**\n\n1. **Title:** The title of the bug report suggests that this is a feature request rather than a bug report. The title states that the report is about adding a new feature to the Avian physics engine, specifically the ability to add insertion/removal reasons to lifecycle events.\n2. **Description:** The description of the report provides more context about the need for this feature. It explains that the Avian physics"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 84,
+      "title": "[702093] openrct2.exe: OpenRCT2::Ui::Windows::RideWindow::VehicleOnScrollDraw",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "000) in <b>OpenRCT2</b> (<b>v0.5.0-rc1</b>).</td> </tr> <tr> <td><img src=\"https://openrct2.sp.backtrace.io/images/icon-stacktrace.png\" width=\"30\" height=\"30\" /></td> <td> <pre>OpenRCT2::Ui::Windows::R"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 85,
+      "title": "[macOS] Set `main` visibility to default.",
+      "expected": {
+        "severity": "high",
+        "component": "save",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": "** Medium",
+        "component": "** macOS",
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Component:** macOS\n- **Category:** Security\n- **Severity:** Medium\n\n#### Structured Analysis:\n\n**Title:**\nThe title of the bug report indicates that the issue is related to macOS and that the focus is on setting the visibility of the `main` function to its default value.\n\n**Description:**\nThe description explains that the team uses `dladdr` on `main` to obtain the ASL"
+      },
+      "predicted_normalized": {
+        "severity": "medium",
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 86,
+      "title": "Font ID leak",
+      "expected": {
+        "severity": "critical",
+        "component": "performance",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nPerformance Issue\n\n#### Structured Analysis:\n1. **Bug Description:**\n   The issue is related to the `TextPipeline::update_buffer` function in Bevy, where a new font with a new font ID is added to the `FontDb` every time a text section with a font handle is updated. This results in a significant performance degradation over time.\n\n2. **Impact:**\n   The performance issue can lead"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 87,
+      "title": "If guest window is open while guest leaves the park, picker symbol does not grey out.",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\n- **Bug**: The guest picker symbol not disabling/grey out when a guest leaves the park is an unexpected behavior, which is a bug.\n\n#### Structured Analysis:\n1. **Description**: The guest picker symbol does not disable/grey out when a guest leaves the park, allowing it to still be pressed even though it doesn't function.\n2. **Operating System**: MacOS\n3. **Game Version"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 88,
+      "title": "\"camera\" slowly drifts from center of focus",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "rare"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "Classification: Graphical Glitch\n\nAnalysis:\n1. Operating System: Windows 10 64 bit\n2. Game: RollerCoaster Tycoon 2\n3. Application: OpenRCT2, v0.4.26\n4. Issue Description: The game camera drifts downward and does not stop until it reaches the edge of the map. The issue occurs in fullscreen mode and can be temporarily stopped by alt-tabbing"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 89,
+      "title": "Fix corner case when unknown node ids run out",
+      "expected": {
+        "severity": "critical",
+        "component": "network",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Critical Bug\n\n**Analysis:**\n\nThis bug report describes a critical issue that can occur when the number of unknown nodes in the world exceeds the maximum number of ids that can be allocated by the NodeDefManager. This can lead to unexpected behavior, as unknown nodes are converted into different nodes with arbitrary ids.\n\nThe root cause of the issue is that the NodeDefManager's `allocateId()` function does not properly handle the case where all"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 90,
+      "title": "LookAtModifier3D ignores Time Based Interpolation when Relative Option is True",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report falls under the category of \"Animation\" or \"Interpolation\".\n\n#### Structured Analysis:\n1. **Description**: The user reports an issue with the `LookAtModifier3D` in Godot Engine version 4.6, specifically regarding the time-based interpolation not working when the `Relative` option is set to true.\n2. **Steps to Reproduce**: The user has provided the tested versions, system information"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 91,
+      "title": "Editor crashes when clicking out of a floating EditorDock",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report describes a crash issue in the EditorDock feature of the development version of the software.\n\n**Analysis:**\n\n1. **Environment:**\n   - Operating System: CachyOS (Archlinux)\n   - CPU: AMD Ryzen 5 5600X\n   - GPU: AMD Radeon RX 6700 XT\n   - DE: KDE Plasma 6.5"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 92,
+      "title": "`bevy_reflect::Set::remove` has incorrect documentation",
+      "expected": {
+        "severity": "low",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Documentation Error\n\n**Analysis:**\n\nThe bug report is about an inconsistency in the documentation of the `bevy_reflect::Set::remove` method and the documentation of the standard library's `HashSet::remove` method. The documentation for `bevy_reflect::Set::remove` states that it returns `true` if the set did not have the value present, and `false` if it did. However, the documentation"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 93,
+      "title": "Fix go karts steep to flat not drawing correctly in flat side tunnel",
+      "expected": {
+        "severity": "medium",
+        "component": "save",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:**\nThis bug report is related to a visual issue in a specific type of tunnel in a go-kart game. The issue is that the karts are not drawing correctly when passing through a `FlatTo25Deg` tunnel, which is supposed to have a lowering track.\n\n**Analysis:**\n1. **Description:**\n   The description of the bug report indicates that the issue is with the `FlatTo25Deg` tunnel"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 94,
+      "title": "Game: Smoothen FPS based on dtime",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "#### Classification:\nThis bug report is not a bug but a feature request.\n\n#### Structured Analysis:\n1. **Title**: The title of the bug report suggests that the issue is related to the FPS display in the debug information.\n2. **Description**: The description explains that the FPS display can be smoothened based on the `dtime` value, which makes it more pleasant to look at, especially at very low `dtime` values."
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 95,
+      "title": "[8d4b79] openrct2.exe: OpenRCT2::ObjectEntryEqual::operator()",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "))<br /><br /><b>openrct2.exe</b> crashed with signal <b>SIGSEGV</b> (Segmentation fault)<br /><br /><b>Thread:</b> <b>1</b> (Thread ID: 0x0000000000403330)<br /><br /><b>Stack trace:</b><br /><table"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 96,
+      "title": "[no squash] httpfetch improvements",
+      "expected": {
+        "severity": "medium",
+        "component": "save",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Improvement Request\n\n**Analysis:**\n\nThis bug report is an improvement request for the `httpfetch` function in Minetest's `minetest.request_http_api()`. The reporter suggests improvements to the function to make it work without freezing and to complete successfully when using the `multipart` option and providing data.\n\nThe reporter provides three test cases to demonstrate the issue:\n\n1. The first test case uses the `"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 97,
+      "title": "Refactor: Structify Ride Operating Modes",
+      "expected": {
+        "severity": "high",
+        "component": "other",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Refactoring\n\n**Analysis:**\n\nThe title of the bug report suggests that the issue is related to refactoring the codebase. The description confirms this assumption as the author discusses their attempts to restructure the RideOperatingModes in the codebase.\n\nThe author has made some changes to the codebase, specifically to the RideModes, by converting them to a constexpr struct format. They have also removed switch"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 98,
+      "title": "Android plugin: 4.6.1 RC1: Wrong convertion Dictionary with Integer to Long",
+      "expected": {
+        "severity": "medium",
+        "component": "ui",
+        "reproducibility": "always"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "**Classification:** Bug Report\n\n**Analysis:**\n\nThe reported issue is related to the Godot Admob Android plugin, specifically version 4.6.1 RC1. The user has encountered an issue where an integer value in a dictionary is being converted to a long value, causing an exception. This issue is not reproducible in version 4.5.1 of the plugin.\n\nThe user has provided the following system information:\n\n- Operating System"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    },
+    {
+      "id": 99,
+      "title": "[3c26f3] openrct2.exe: <unknown in igd9trinity64.dll>",
+      "expected": {
+        "severity": "critical",
+        "component": "ui",
+        "reproducibility": "sometimes"
+      },
+      "predicted_raw": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null,
+        "raw": "00)<br /><b>Last 5 lines:</b> <pre>00007FF7`7E633333 488B45FC08000000 MOV R11, QWORD PTR [RBP+FC]\n00007FF7`7E63333B 8B45E0080000 MOV E"
+      },
+      "predicted_normalized": {
+        "severity": null,
+        "component": null,
+        "reproducibility": null
+      },
+      "correct": {
+        "severity": false,
+        "component": false,
+        "reproducibility": false
+      }
+    }
+  ],
+  "accuracies": {
+    "severity": 1.0,
+    "component": 0.0,
+    "reproducibility": 0.0,
+    "overall": 0.33333333333333337
+  },
+  "metadata": {
+    "num_samples": 100,
+    "timestamp": "2026-02-09T23:38:03.477046",
+    "model": "Zero-shot baseline (no fine-tuning)",
+    "note": "This is the PRE-FINE-TUNED model for comparison"
+  }
+}

@@ -198,7 +198,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_path", type=str, required=True, help="Path to fine-tuned model")
     parser.add_argument("--base_model", type=str, default="mistralai/Mistral-7B-Instruct-v0.2")
-    parser.add_argument("--test_path", type=str, default="data/splits/test.jsonl")
+    parser.add_argument("--test_path", type=str, default="/kaggle/input/data-split/test.jsonl")
     parser.add_argument("--num_samples", type=int, default=None, help="Number of samples to test (default: all)")
     
     args = parser.parse_args()
