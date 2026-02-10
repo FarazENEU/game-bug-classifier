@@ -49,11 +49,9 @@ api_keys/
 # Model files (too large for git)
 models/checkpoints/
 models/saved_models/
-*.bin
 *.pt
 *.pth
 *.ckpt
-*.safetensors
 *.h5
 *.onnx
 

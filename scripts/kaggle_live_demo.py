@@ -55,13 +55,27 @@ def main():
                 break
     
     if not model_path:
-        print("\n❌ Model not found! Tried:")
+        print("\n❌ Model adapter files not found!")
+        print("\n📁 Checked these locations:")
         for path in possible_paths:
             exists = "✓" if os.path.exists(path) else "✗"
             print(f"   {exists} {path}")
-        print("\n💡 Make sure you're running from the repository directory:")
-        print("   cd /kaggle/working/game-bug-classifier")
-        print("   python scripts/kaggle_live_demo.py")
+            if os.path.exists(path):
+                # Show what's actually in the directory
+                try:
+                    files = os.listdir(path)
+                    if files:
+                        print(f"      Contents: {', '.join(files[:5])}")
+                    else:
+                        print(f"      (empty directory)")
+                except:
+                    pass
+        
+        print("\n💡 The adapter files (adapter_config.json, adapter_model.safetensors) are missing.")
+        print("   You may need to:")
+        print("   1. Download the trained model from your training outputs")
+        print("   2. Unzip if it's in a .zip file")
+        print("   3. Or train a new model first")
         return
     
     try:
