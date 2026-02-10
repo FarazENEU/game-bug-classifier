@@ -38,7 +38,7 @@ This project investigates parameter-efficient fine-tuning (PEFT) for automated b
 
 Game development studios receive thousands of bug reports that must be manually triaged by developers. Each report needs to be classified along multiple dimensions: severity level (Critical/High/Medium/Low), affected component (UI/Gameplay/Graphics/Audio/etc.), and reproducibility (Always/Sometimes/Rarely). This manual classification process typically consumes 2--5 minutes per report, translating to 16--40 hours per week of senior developer time.
 
-Existing automated approaches face limitations. Traditional keyword-based systems achieve 60--65\% accuracy \cite{lamkanfi2010}, while more sophisticated BERT-based models require 50,000 or more training examples \cite{fan2021}. Using GPT-4 API for on-demand classification introduces both cost concerns (approximately \$0.02 per request) and data privacy issues when sharing proprietary bug reports with third-party services.
+Existing automated approaches face limitations. Traditional machine learning approaches using keyword-based features achieve modest accuracy \cite{lamkanfi2010}, while more sophisticated deep learning models typically require tens of thousands of training examples for competitive performance. Using GPT-4 API for on-demand classification introduces both cost concerns (approximately \$0.02 per request) and data privacy issues when sharing proprietary bug reports with third-party services.
 
 This project explores whether parameter-efficient fine-tuning (PEFT) can provide a practical alternative. Specifically, we fine-tune Mistral-7B-Instruct using QLoRA on just 1,399 labeled examples, achieving 64\% classification accuracy with only 2 hours of training on free Kaggle GPUs. Beyond demonstrating competitive performance, we investigate why different classification tasks show dramatically different accuracy levels, and document an important lesson about label vocabulary consistency that caused one experimental variation to fail catastrophically despite using semantically superior labels.
 
@@ -46,13 +46,13 @@ This project explores whether parameter-efficient fine-tuning (PEFT) can provide
 
 \subsection{Background and Related Work}
 
-Automated bug classification has evolved significantly over the past two decades. Early approaches from Lamkanfi et al.\ \cite{lamkanfi2010} used keyword-based features with traditional machine learning classifiers like Support Vector Machines, achieving 60--65\% accuracy. These systems were computationally efficient but struggled with nuanced cases requiring contextual understanding.
+Automated bug classification has evolved significantly over the past two decades. Early approaches from Lamkanfi et al.\ \cite{lamkanfi2010} used keyword-based features with traditional machine learning classifiers like Support Vector Machines. These systems were computationally efficient but struggled with nuanced cases requiring contextual understanding.
 
-The deep learning era brought improved accuracy but at the cost of data requirements. Tian et al.\ \cite{tian2020} applied BiLSTM with attention mechanisms to achieve 72--75\% accuracy, while Fan et al.\ \cite{fan2021} fine-tuned BERT-base on 50,000 GitHub bug reports to reach 78--82\% accuracy. However, these approaches required full fine-tuning of all model parameters, making them expensive for organizations with limited compute resources.
+The deep learning era brought improved accuracy but at the cost of data requirements. Recent approaches using BERT and similar transformers have achieved strong results on bug classification tasks, but typically require full fine-tuning of all model parameters and large training datasets (often 50,000+ examples), making them expensive for organizations with limited compute resources.
 
 Recent advances in parameter-efficient fine-tuning (PEFT) offer a more accessible alternative. Hu et al.\ \cite{hu2021} introduced Low-Rank Adaptation (LoRA), which trains only small low-rank matrices that modify the model's behavior, dramatically reducing the number of trainable parameters. Dettmers et al.\ \cite{dettmers2023} extended this with QLoRA, which combines 4-bit model quantization with LoRA, reducing memory requirements from 28GB to approximately 7GB for a 7-billion parameter model.
 
-Our work applies QLoRA to fine-tune Mistral-7B-Instruct using a relatively small dataset of 1,399 examples, exploring whether this combination can achieve competitive accuracy without the large datasets required by prior work. We also investigate label generation using the approach suggested by Zheng et al.\ \cite{zheng2024}, where larger language models can generate training labels for smaller models.
+Our work applies QLoRA to fine-tune Mistral-7B-Instruct using a relatively small dataset of 1,399 examples, exploring whether this combination can achieve competitive accuracy without the large datasets required by prior work. We also investigate label generation using the approach suggested by Wang et al.\ \cite{wang2023}, where larger language models can generate training labels for smaller models.
 
 \subsection{Data Collection and Preprocessing}
 
@@ -281,7 +281,7 @@ Additionally, all bug reports in our dataset are in English, from open-source pr
 
 \subsection{Missing Baselines and Comparisons}
 
-Due to time and resource constraints, we did not train comparable BERT-based baselines on the same 1,399-example dataset. While prior work achieved 78--82\% accuracy using BERT on 50,000+ examples \cite{fan2021}, we cannot definitively know whether BERT trained on our smaller dataset would outperform or underperform our QLoRA-based approach. This comparison would be valuable for understanding whether instruction-tuned LLMs with PEFT have inherent advantages for small-data scenarios, or whether our results simply reflect standard supervised learning patterns.
+Due to time and resource constraints, we did not train comparable BERT-based baselines on the same 1,399-example dataset. While prior work has achieved strong results using BERT-based models on large bug report datasets (50,000+ examples), we cannot definitively know whether BERT trained on our smaller dataset would outperform or underperform our QLoRA-based approach. This comparison would be valuable for understanding whether instruction-tuned LLMs with PEFT have inherent advantages for small-data scenarios, or whether our results simply reflect standard supervised learning patterns.
 
 We also did not experiment with different base models (Llama-2, GPT-2, Llama-3) beyond our choice of Mistral-7B-Instruct, nor did we explore ensemble methods or more sophisticated prompt engineering for the zero-shot baseline. These comparisons would strengthen claims about the effectiveness of our specific approach relative to alternatives.
 
@@ -306,19 +306,13 @@ We also documented a valuable negative result where semantically improved labels
 While working under constraints of limited compute (Kaggle's 30-hour weekly GPU quota), limited data (GitHub API rate limits), and limited time (assignment deadline), we demonstrated that achieving useful results with PEFT does not require massive infrastructure or datasets. This accessibility makes custom LLM deployment viable for organizations and researchers who previously could not afford the resources required for full model fine-tuning or large-scale data collection.
 
 \begin{thebibliography}{9}
-\bibitem{anvik2006} Anvik, J., Hiew, L., \& Murphy, G. C. (2006). Who should fix this bug? In \textit{Proceedings of ICSE '06}.
-
 \bibitem{dettmers2023} Dettmers, T., Pagnoni, A., Holtzman, A., \& Zettlemoyer, L. (2023). QLoRA: Efficient finetuning of quantized LLMs. In \textit{NeurIPS 2023}.
-
-\bibitem{fan2021} Fan, A., Ordoñez, V., \& Yang, J. (2021). Automated bug report labeling with pre-trained transformers. In \textit{Proceedings of ASE 2021}.
 
 \bibitem{hu2021} Hu, E. J., Shen, Y., Wallis, P., et al. (2021). LoRA: Low-rank adaptation of large language models. In \textit{Proceedings of ICLR 2022}.
 
 \bibitem{lamkanfi2010} Lamkanfi, A., Demeyer, S., Giger, E., \& Goethals, B. (2010). Predicting the severity of a reported bug. In \textit{7th IEEE Working Conference on MSR 2010}.
 
-\bibitem{tian2020} Tian, Y., Wijedasa, D., Lo, D., \& Le Goues, C. (2020). Deep learning for automated bug severity assessment. \textit{IEEE Trans. Software Engineering}.
-
-\bibitem{zheng2024} Zheng, R., Dou, S., Gao, S., et al. (2024). Self-Instruct: Aligning LLMs with self-generated instructions. \textit{ArXiv preprint}.
+\bibitem{wang2023} Wang, Y., Kordi, Y., Mishra, S., Liu, A., Smith, N. A., Khashabi, D., \& Hajishirzi, H. (2023). Self-Instruct: Aligning language models with self-generated instructions. In \textit{Proceedings of ACL 2023}.
 
 \end{thebibliography}
 

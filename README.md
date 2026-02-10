@@ -189,6 +189,64 @@ python scripts/train.py --lora_r 16 --lora_alpha 64 --output_dir outputs_r16
 - Training time matters more than rank capacity (r4 ≈ r16 with 1 epoch each)
 - Reproducibility easiest to classify (88.37%), severity hardest (41.86%)
 
+### 📊 Visual Results
+
+![Performance Comparison](visuals/performance_comparison.png)
+
+**Confusion Matrices** (based on 50-sample quick evaluation):
+
+<details>
+<summary>Click to expand confusion matrices for each classification task</summary>
+
+#### Severity Classification
+![Severity Confusion Matrix](visuals/confusion_matrix_severity.png)
+
+Key insights:
+- Medium/High confusion is common (subjective boundary)
+- Critical incidents reasonably well-recognized when crash/security keywords present
+
+#### Component Classification  
+![Component Confusion Matrix](visuals/confusion_matrix_component.png)
+
+Key insights:
+- UI shows strong diagonal (distinct vocabulary patterns)
+- Some Graphics/Performance overlap expected (GPU-related issues)
+
+#### Reproducibility Classification
+![Reproducibility Confusion Matrix](visuals/confusion_matrix_reproducibility.png)
+
+Key insights:
+- Highest accuracy (88.37%) with strong diagonal
+- Clear linguistic signals: "always" → "every time", "consistently"; "rare" → "once", "occasionally"
+
+</details>
+
+> **🔬 Ongoing Experiments:** Currently training V1-r4 and V1-r16 with 3 epochs to complete the hyperparameter study and verify whether r=8 is truly optimal or if the performance difference was primarily due to training duration.
+
+## 🎯 Portfolio Enhancements Roadmap
+
+To transform this from a course project into a standout portfolio piece, the following improvements are planned:
+
+### High Priority
+- [ ] **Interactive Demo** - Gradio/Streamlit app deployed to HuggingFace Spaces where users can input bug reports and see live classifications
+- [x] **Visualizations** - Performance charts, confusion matrices, and side-by-side baseline vs fine-tuned comparisons ✓
+- [ ] **Complete Hyperparameter Study** - Run V1-r4 and V1-r16 for 3 epochs to conclusively determine optimal rank
+- [ ] **Error Analysis** - Deep dive into failure cases with explanations and patterns
+
+### Medium Priority
+- [ ] **Production Deployment Guide** - Docker container with inference API and deployment instructions
+- [ ] **Inference Benchmarks** - Latency, throughput, and cost analysis for production use
+- [ ] **Code Refactoring** - Extract hardcoded configs, add type hints, improve modularity
+- [ ] **Unit Tests** - Test coverage for data preprocessing, evaluation metrics, and model loading
+
+### Low Priority  
+- [ ] **Extended Dataset** - Expand from 4 to 10+ game repositories for better generalization
+- [ ] **Multi-language Support** - Test on non-English bug reports
+- [ ] **Ensemble Models** - Combine multiple LoRA ranks for improved accuracy
+- [ ] **Blog Post** - Detailed write-up of methodology, failures, and lessons learned
+
+**Contributions welcome!** If you're interested in helping with any of these improvements, please open an issue or PR.
+
 ## 🔧 Configuration
 
 Training hyperparameters (from `scripts/train.py`):
