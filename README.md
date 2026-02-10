@@ -245,8 +245,6 @@ To transform this from a course project into a standout portfolio piece, the fol
 - [ ] **Ensemble Models** - Combine multiple LoRA ranks for improved accuracy
 - [ ] **Blog Post** - Detailed write-up of methodology, failures, and lessons learned
 
-**Contributions welcome!** If you're interested in helping with any of these improvements, please open an issue or PR.
-
 ## 🔧 Configuration
 
 Training hyperparameters (from `scripts/train.py`):
