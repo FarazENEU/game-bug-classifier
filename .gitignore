@@ -70,7 +70,6 @@ data/interim/
 # Logs and outputs
 logs/
 *.log
-outputs/
 results/
 wandb/
 mlruns/

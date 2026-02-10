@@ -102,29 +102,40 @@ peft_config = LoraConfig(
 
 ### PART 3: Live Demo (2.5 mins)
 
-**Screen 5:** Terminal
-```bash
-cd "/Users/faraz/Projects/Uni/7375/LLM Fine Tuning"
-python scripts/show_eval_examples.py
+**Screen 5:** Kaggle notebook - create new code cell
+
+**Paste and run:**
+```python
+!python /kaggle/working/scripts/kaggle_live_demo.py
 ```
 
-**Wait for output, say:**
-- "Let me show some real predictions from the evaluation set"
-- [Output appears]
-- "Here's example 1: a button overlap bug"
-- "Model correctly identified UI component and 'sometimes' reproducibility"
-- "Got severity wrong - predicted medium instead of high"
-- "This shows the limitation of keyword-based training labels"
+**Say BEFORE running:**
+- "Let me show the model working live on a sample bug report"
+- "I'll classify a graphics crash bug in real-time"
+- [Click run]
 
-**Continue:**
-- "Example 2: shader cache error"
-- "Correctly got severity and reproducibility"
-- "Confused component - said audio instead of UI"
-- "Shows the model is learning but not perfect"
+**[EDIT OUT: 2-3 minutes of model loading time]**
 
-**Scroll to bottom stats:**
-- "Overall: 64% average on 50 test samples"
-- "195× better than the base model with no fine-tuning"
+**Say AFTER model loads (when prediction appears):**
+- "Here's the sample: game crashes when loading high-res textures"
+- "GPU memory error, happens every time in the forest area"
+- [Point to prediction output]
+- "The model correctly classified this as:"
+- "Severity: high - because it's a crash affecting gameplay"
+- "Component: graphics - GPU memory and textures"
+- "Reproducibility: always - 100% reproduction rate"
+- "This shows the model learned to understand bug patterns from context, not just keywords"
+
+**Alternative if showing evaluation results instead:**
+```python
+# If you prefer faster demo without model loading
+import json
+with open("/kaggle/working/outputs_v3_r8/evaluation_results.json") as f:
+    data = json.load(f)
+for i, pred in enumerate(data["predictions"][:3], 1):
+    print(f"Example {i}: {pred['input'][:100]}...")
+    print(f"Predicted: {pred['predicted']}")
+```
 
 ---
 
