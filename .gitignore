@@ -46,6 +46,24 @@ credentials.json
 *.token
 api_keys/
 
+# Personal notes and planning documents
+docs/
+NEXT_STEPS.md
+PRESENTATION_NOTES.md
+.gitignore_notes
+state.db
+
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+
+# macOS
+.DS_Store
+
 # Model files (too large for git)
 models/checkpoints/
 models/saved_models/
@@ -60,7 +78,6 @@ data/raw/
 data/processed/
 data/interim/
 *.csv
-*.jsonl
 *.parquet
 *.feather
 !data/sample/
